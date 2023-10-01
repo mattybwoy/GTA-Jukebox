@@ -9,13 +9,17 @@
 /* Begin PBXBuildFile section */
 		341E41EA2AC99C5E00681B63 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 341E41E92AC99C5E00681B63 /* AppDelegate.swift */; };
 		341E41EC2AC99C5E00681B63 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 341E41EB2AC99C5E00681B63 /* SceneDelegate.swift */; };
-		341E41EE2AC99C5E00681B63 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 341E41ED2AC99C5E00681B63 /* ViewController.swift */; };
+		341E41EE2AC99C5E00681B63 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 341E41ED2AC99C5E00681B63 /* MainViewController.swift */; };
 		341E41F12AC99C5E00681B63 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 341E41EF2AC99C5E00681B63 /* Main.storyboard */; };
 		341E41F32AC99C6100681B63 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 341E41F22AC99C6100681B63 /* Assets.xcassets */; };
 		341E41F62AC99C6100681B63 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 341E41F42AC99C6100681B63 /* LaunchScreen.storyboard */; };
 		341E42012AC99C6100681B63 /* GTA_JukeboxTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 341E42002AC99C6100681B63 /* GTA_JukeboxTests.swift */; };
 		341E420B2AC99C6200681B63 /* GTA_JukeboxUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 341E420A2AC99C6200681B63 /* GTA_JukeboxUITests.swift */; };
 		341E420D2AC99C6200681B63 /* GTA_JukeboxUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 341E420C2AC99C6200681B63 /* GTA_JukeboxUITestsLaunchTests.swift */; };
+		341E421B2AC9B6CD00681B63 /* pricedown.otf in Resources */ = {isa = PBXBuildFile; fileRef = 341E421A2AC9B6CC00681B63 /* pricedown.otf */; };
+		341E421E2AC9B7BE00681B63 /* GTA.png in Resources */ = {isa = PBXBuildFile; fileRef = 341E421D2AC9B7BE00681B63 /* GTA.png */; };
+		341E42212AC9BE0100681B63 /* GenericViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 341E42202AC9BE0100681B63 /* GenericViewController.swift */; };
+		341E42232AC9BEB800681B63 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 341E42222AC9BEB800681B63 /* MainView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,7 +43,7 @@
 		341E41E62AC99C5E00681B63 /* GTA Jukebox.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "GTA Jukebox.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		341E41E92AC99C5E00681B63 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		341E41EB2AC99C5E00681B63 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		341E41ED2AC99C5E00681B63 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		341E41ED2AC99C5E00681B63 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		341E41F02AC99C5E00681B63 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		341E41F22AC99C6100681B63 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		341E41F52AC99C6100681B63 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -50,6 +54,10 @@
 		341E420A2AC99C6200681B63 /* GTA_JukeboxUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GTA_JukeboxUITests.swift; sourceTree = "<group>"; };
 		341E420C2AC99C6200681B63 /* GTA_JukeboxUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GTA_JukeboxUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		341E42192AC99D6600681B63 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		341E421A2AC9B6CC00681B63 /* pricedown.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = pricedown.otf; sourceTree = "<group>"; };
+		341E421D2AC9B7BE00681B63 /* GTA.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = GTA.png; sourceTree = "<group>"; };
+		341E42202AC9BE0100681B63 /* GenericViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericViewController.swift; sourceTree = "<group>"; };
+		341E42222AC9BEB800681B63 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +88,7 @@
 		341E41DD2AC99C5E00681B63 = {
 			isa = PBXGroup;
 			children = (
+				341E421C2AC9B7A400681B63 /* Documentation */,
 				341E42192AC99D6600681B63 /* README.md */,
 				341E41E82AC99C5E00681B63 /* GTA Jukebox */,
 				341E41FF2AC99C6100681B63 /* GTA JukeboxTests */,
@@ -103,7 +112,8 @@
 			children = (
 				341E41E92AC99C5E00681B63 /* AppDelegate.swift */,
 				341E41EB2AC99C5E00681B63 /* SceneDelegate.swift */,
-				341E41ED2AC99C5E00681B63 /* ViewController.swift */,
+				341E421F2AC9B87D00681B63 /* ViewControllers */,
+				341E42252AC9C38800681B63 /* Fonts */,
 				341E41EF2AC99C5E00681B63 /* Main.storyboard */,
 				341E41F22AC99C6100681B63 /* Assets.xcassets */,
 				341E41F42AC99C6100681B63 /* LaunchScreen.storyboard */,
@@ -127,6 +137,40 @@
 				341E420C2AC99C6200681B63 /* GTA_JukeboxUITestsLaunchTests.swift */,
 			);
 			path = "GTA JukeboxUITests";
+			sourceTree = "<group>";
+		};
+		341E421C2AC9B7A400681B63 /* Documentation */ = {
+			isa = PBXGroup;
+			children = (
+				341E421D2AC9B7BE00681B63 /* GTA.png */,
+			);
+			path = Documentation;
+			sourceTree = "<group>";
+		};
+		341E421F2AC9B87D00681B63 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				341E42202AC9BE0100681B63 /* GenericViewController.swift */,
+				341E41ED2AC99C5E00681B63 /* MainViewController.swift */,
+				341E42242AC9BEBC00681B63 /* Views */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		341E42242AC9BEBC00681B63 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				341E42222AC9BEB800681B63 /* MainView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		341E42252AC9C38800681B63 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				341E421A2AC9B6CC00681B63 /* pricedown.otf */,
+			);
+			path = Fonts;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -236,6 +280,8 @@
 				341E41F62AC99C6100681B63 /* LaunchScreen.storyboard in Resources */,
 				341E41F32AC99C6100681B63 /* Assets.xcassets in Resources */,
 				341E41F12AC99C5E00681B63 /* Main.storyboard in Resources */,
+				341E421B2AC9B6CD00681B63 /* pricedown.otf in Resources */,
+				341E421E2AC9B7BE00681B63 /* GTA.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -260,8 +306,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				341E41EE2AC99C5E00681B63 /* ViewController.swift in Sources */,
+				341E41EE2AC99C5E00681B63 /* MainViewController.swift in Sources */,
 				341E41EA2AC99C5E00681B63 /* AppDelegate.swift in Sources */,
+				341E42212AC9BE0100681B63 /* GenericViewController.swift in Sources */,
+				341E42232AC9BEB800681B63 /* MainView.swift in Sources */,
 				341E41EC2AC99C5E00681B63 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
