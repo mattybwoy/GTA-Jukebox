@@ -7,8 +7,15 @@
 
 import UIKit
 
-class MainView: UIView {
+protocol LandingScreenDelegate: AnyObject {
+    func previousGame()
+    func nextGame()
+}
 
+final class MainView: UIView {
+
+    weak var landingDelegate: LandingScreenDelegate?
+    
     public init() {
         super.init(frame: .zero)
         backgroundColor = .black
@@ -25,9 +32,9 @@ class MainView: UIView {
         titleImage.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
             titleImage.centerXAnchor.constraint(equalTo: centerXAnchor),
-            titleImage.centerYAnchor.constraint(equalTo: centerYAnchor, constant: -280),
-            titleImage.heightAnchor.constraint(equalToConstant: 220),
-            titleImage.widthAnchor.constraint(equalToConstant: 300)
+            titleImage.centerYAnchor.constraint(equalTo: centerYAnchor, constant: -270),
+            titleImage.heightAnchor.constraint(equalToConstant: 200),
+            titleImage.widthAnchor.constraint(equalToConstant: 280)
         ])
         
         addSubview(title)
@@ -36,7 +43,7 @@ class MainView: UIView {
             title.centerXAnchor.constraint(equalTo: centerXAnchor),
             title.centerYAnchor.constraint(equalTo: centerYAnchor, constant: -145),
             title.heightAnchor.constraint(equalToConstant: 100),
-            title.widthAnchor.constraint(equalToConstant: 250)
+            title.widthAnchor.constraint(equalToConstant: 240)
         ])
         
         addSubview(antennaImage)
@@ -115,19 +122,31 @@ class MainView: UIView {
         return gameImage
     }()
     
-    private let leftButton: UIImageView = {
-       let buttonImage = UIImageView()
-        buttonImage.image = UIImage(systemName: "play.circle")
-        buttonImage.transform = CGAffineTransform(scaleX: -1, y: 1)
-        buttonImage.tintColor = .white
-        return buttonImage
+    private var leftButton: UIButton = {
+        let leftButton = UIButton(frame: CGRect(x: 0, y: 0, width: 50, height: 50))
+        var leftConfig = UIButton.Configuration.plain()
+        leftConfig.image = UIImage(systemName: "play.circle", withConfiguration: UIImage.SymbolConfiguration(scale: .large))?.applyingSymbolConfiguration(.init(pointSize: 35))
+        leftConfig.contentInsets = .zero
+        leftButton.configuration = leftConfig
+        leftButton.contentVerticalAlignment = .fill
+        leftButton.contentHorizontalAlignment = .fill
+        leftButton.transform = CGAffineTransform(scaleX: -1.0, y: 1.0)
+        leftButton.addTarget(self, action: #selector(previousGame), for: .touchUpInside)
+        leftButton.tintColor = .white
+        return leftButton
     }()
     
-    private let rightButton: UIImageView = {
-       let buttonImage = UIImageView()
-        buttonImage.image = UIImage(systemName: "play.circle")
-        buttonImage.tintColor = .white
-        return buttonImage
+    private var rightButton: UIButton = {
+        let rightButton = UIButton(frame: CGRect(x: 0, y: 0, width: 50, height: 50))
+        var rightConfig = UIButton.Configuration.plain()
+        rightConfig.image = UIImage(systemName: "play.circle", withConfiguration: UIImage.SymbolConfiguration(scale: .large))?.applyingSymbolConfiguration(.init(pointSize: 35))
+        rightConfig.contentInsets = .zero
+        rightButton.configuration = rightConfig
+        rightButton.contentVerticalAlignment = .fill
+        rightButton.contentHorizontalAlignment = .fill
+        rightButton.addTarget(self, action: #selector(nextGame), for: .touchUpInside)
+        rightButton.tintColor = .white
+        return rightButton
     }()
     
     private let select: UIButton = {
@@ -141,5 +160,13 @@ class MainView: UIView {
         selectButton.layer.borderColor = UIColor.systemGreen.cgColor
         return selectButton
     }()
+    
+    @objc func previousGame() {
+        landingDelegate?.previousGame()
+    }
+    
+    @objc func nextGame() {
+        landingDelegate?.nextGame()
+    }
     
 }
