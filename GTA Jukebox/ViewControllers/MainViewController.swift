@@ -7,10 +7,21 @@
 
 import UIKit
 
-final class MainViewController: GenericViewController <MainView>, LandingScreenDelegate {
-
+final class MainViewController: GenericViewController <MainView> {
+    
+    private var viewModel = MainViewModel()
+    
+    init() {
+        super.init(nibName: nil, bundle: nil)
+    }
+    
+    required init?(coder: NSCoder) {
+        super.init(coder: coder)
+    }
+    
     override func viewDidLoad() {
-        rootView.landingDelegate = self
+        super.viewDidLoad()
+        viewModel.bind(to: rootView)
     }
     
     override func loadView() {
@@ -23,13 +34,5 @@ final class MainViewController: GenericViewController <MainView>, LandingScreenD
         case sanAndreas = "SanAndreasLogo"
     }
     
-    func previousGame() {
-        print("hello")
-    }
-    
-    func nextGame() {
-        print("goodbye")
-    }
-
 }
 

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0AC244342B7EA60000F33D92 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AC244332B7EA60000F33D92 /* MainViewModel.swift */; };
 		341E41EA2AC99C5E00681B63 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 341E41E92AC99C5E00681B63 /* AppDelegate.swift */; };
 		341E41EC2AC99C5E00681B63 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 341E41EB2AC99C5E00681B63 /* SceneDelegate.swift */; };
 		341E41EE2AC99C5E00681B63 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 341E41ED2AC99C5E00681B63 /* MainViewController.swift */; };
@@ -40,6 +41,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0AC244332B7EA60000F33D92 /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
 		341E41E62AC99C5E00681B63 /* GTA Jukebox.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "GTA Jukebox.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		341E41E92AC99C5E00681B63 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		341E41EB2AC99C5E00681B63 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -153,6 +155,7 @@
 				341E42202AC9BE0100681B63 /* GenericViewController.swift */,
 				341E41ED2AC99C5E00681B63 /* MainViewController.swift */,
 				341E42242AC9BEBC00681B63 /* Views */,
+				0AC244332B7EA60000F33D92 /* MainViewModel.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -311,6 +314,7 @@
 				341E42212AC9BE0100681B63 /* GenericViewController.swift in Sources */,
 				341E42232AC9BEB800681B63 /* MainView.swift in Sources */,
 				341E41EC2AC99C5E00681B63 /* SceneDelegate.swift in Sources */,
+				0AC244342B7EA60000F33D92 /* MainViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
