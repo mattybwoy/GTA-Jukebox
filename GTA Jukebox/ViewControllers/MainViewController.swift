@@ -7,12 +7,13 @@
 
 import UIKit
 
-final class MainViewController: GenericViewController <MainView> {
+final class MainViewController: GenericViewController <MainView>, GameSelectionDelegate {
     
-    private var viewModel = MainViewModel()
+    private var viewModel = MainViewModel(gameState: .gta3)
     
     init() {
         super.init(nibName: nil, bundle: nil)
+        viewModel.GameSelectionDelegate = self
     }
     
     required init?(coder: NSCoder) {
@@ -27,11 +28,10 @@ final class MainViewController: GenericViewController <MainView> {
     override func loadView() {
         self.view = MainView()
     }
-
-    enum GameSelection: String {
-        case gta3 = "GTA3Logo"
-        case viceCity = "ViceCityLogo"
-        case sanAndreas = "SanAndreasLogo"
+    
+    func didUpdateGame(newGame: String) {
+        rootView.gameSelection = viewModel.gameState
+        rootView.gameSelectionImage.image = UIImage(named: newGame)
     }
     
 }

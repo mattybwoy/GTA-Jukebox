@@ -8,13 +8,15 @@
 import UIKit
 
 protocol LandingScreenDelegate: AnyObject {
-    func previousGame()
-    func nextGame()
+    func previousGame(gameImage: String)
+    func nextGame(gameImage: String)
+    var gameState: GameSelection { get set }
 }
 
 final class MainView: UIView {
 
     weak var landingDelegate: LandingScreenDelegate?
+    public var gameSelection: GameSelection = .gta3
     
     public init() {
         super.init(frame: .zero)
@@ -116,9 +118,9 @@ final class MainView: UIView {
         return antennaImage
     }()
     
-    private var gameSelectionImage: UIImageView = {
+    public lazy var gameSelectionImage: UIImageView = {
         let gameImage = UIImageView()
-        gameImage.image = UIImage(named: "GTA3Logo")
+        gameImage.image = UIImage(named: gameSelection.rawValue)
         return gameImage
     }()
     
@@ -162,11 +164,11 @@ final class MainView: UIView {
     }()
     
     @objc func previousGame() {
-        landingDelegate?.previousGame()
+        landingDelegate?.previousGame(gameImage: gameSelection.rawValue)
     }
     
     @objc func nextGame() {
-        landingDelegate?.nextGame()
+        landingDelegate?.nextGame(gameImage: gameSelection.rawValue)
     }
     
 }
