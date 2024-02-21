@@ -48,7 +48,6 @@ final class MainViewModel: LandingScreenDelegate {
         default:
             return
         }
-        print(gameImage)
     }
     
     func nextGame(gameImage: String) {
@@ -65,7 +64,6 @@ final class MainViewModel: LandingScreenDelegate {
         default:
             return
         }
-        print(gameImage)
     }
     
 }

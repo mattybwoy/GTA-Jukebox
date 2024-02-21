@@ -35,4 +35,3 @@ final class MainViewController: GenericViewController <MainView>, GameSelectionD
     }
     
 }
-

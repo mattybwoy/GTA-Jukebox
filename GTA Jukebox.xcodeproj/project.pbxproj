@@ -8,12 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		0AC244342B7EA60000F33D92 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AC244332B7EA60000F33D92 /* MainViewModel.swift */; };
+		0AC244362B8681B400F33D92 /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AC244352B8681B400F33D92 /* SplashViewController.swift */; };
+		0AC244382B8681F000F33D92 /* SplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AC244372B8681F000F33D92 /* SplashView.swift */; };
 		341E41EA2AC99C5E00681B63 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 341E41E92AC99C5E00681B63 /* AppDelegate.swift */; };
 		341E41EC2AC99C5E00681B63 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 341E41EB2AC99C5E00681B63 /* SceneDelegate.swift */; };
 		341E41EE2AC99C5E00681B63 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 341E41ED2AC99C5E00681B63 /* MainViewController.swift */; };
 		341E41F12AC99C5E00681B63 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 341E41EF2AC99C5E00681B63 /* Main.storyboard */; };
 		341E41F32AC99C6100681B63 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 341E41F22AC99C6100681B63 /* Assets.xcassets */; };
-		341E41F62AC99C6100681B63 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 341E41F42AC99C6100681B63 /* LaunchScreen.storyboard */; };
 		341E42012AC99C6100681B63 /* GTA_JukeboxTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 341E42002AC99C6100681B63 /* GTA_JukeboxTests.swift */; };
 		341E420B2AC99C6200681B63 /* GTA_JukeboxUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 341E420A2AC99C6200681B63 /* GTA_JukeboxUITests.swift */; };
 		341E420D2AC99C6200681B63 /* GTA_JukeboxUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 341E420C2AC99C6200681B63 /* GTA_JukeboxUITestsLaunchTests.swift */; };
@@ -42,13 +43,14 @@
 
 /* Begin PBXFileReference section */
 		0AC244332B7EA60000F33D92 /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
+		0AC244352B8681B400F33D92 /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
+		0AC244372B8681F000F33D92 /* SplashView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashView.swift; sourceTree = "<group>"; };
 		341E41E62AC99C5E00681B63 /* GTA Jukebox.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "GTA Jukebox.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		341E41E92AC99C5E00681B63 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		341E41EB2AC99C5E00681B63 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		341E41ED2AC99C5E00681B63 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		341E41F02AC99C5E00681B63 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		341E41F22AC99C6100681B63 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		341E41F52AC99C6100681B63 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		341E41F72AC99C6100681B63 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		341E41FC2AC99C6100681B63 /* GTA JukeboxTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "GTA JukeboxTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		341E42002AC99C6100681B63 /* GTA_JukeboxTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GTA_JukeboxTests.swift; sourceTree = "<group>"; };
@@ -118,7 +120,6 @@
 				341E42252AC9C38800681B63 /* Fonts */,
 				341E41EF2AC99C5E00681B63 /* Main.storyboard */,
 				341E41F22AC99C6100681B63 /* Assets.xcassets */,
-				341E41F42AC99C6100681B63 /* LaunchScreen.storyboard */,
 				341E41F72AC99C6100681B63 /* Info.plist */,
 			);
 			path = "GTA Jukebox";
@@ -156,6 +157,7 @@
 				341E41ED2AC99C5E00681B63 /* MainViewController.swift */,
 				341E42242AC9BEBC00681B63 /* Views */,
 				0AC244332B7EA60000F33D92 /* MainViewModel.swift */,
+				0AC244352B8681B400F33D92 /* SplashViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -164,6 +166,7 @@
 			isa = PBXGroup;
 			children = (
 				341E42222AC9BEB800681B63 /* MainView.swift */,
+				0AC244372B8681F000F33D92 /* SplashView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -280,7 +283,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				341E41F62AC99C6100681B63 /* LaunchScreen.storyboard in Resources */,
 				341E41F32AC99C6100681B63 /* Assets.xcassets in Resources */,
 				341E41F12AC99C5E00681B63 /* Main.storyboard in Resources */,
 				341E421B2AC9B6CD00681B63 /* pricedown.otf in Resources */,
@@ -310,10 +312,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				341E41EE2AC99C5E00681B63 /* MainViewController.swift in Sources */,
+				0AC244382B8681F000F33D92 /* SplashView.swift in Sources */,
 				341E41EA2AC99C5E00681B63 /* AppDelegate.swift in Sources */,
 				341E42212AC9BE0100681B63 /* GenericViewController.swift in Sources */,
 				341E42232AC9BEB800681B63 /* MainView.swift in Sources */,
 				341E41EC2AC99C5E00681B63 /* SceneDelegate.swift in Sources */,
+				0AC244362B8681B400F33D92 /* SplashViewController.swift in Sources */,
 				0AC244342B7EA60000F33D92 /* MainViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -357,14 +361,6 @@
 				341E41F02AC99C5E00681B63 /* Base */,
 			);
 			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		341E41F42AC99C6100681B63 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				341E41F52AC99C6100681B63 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
