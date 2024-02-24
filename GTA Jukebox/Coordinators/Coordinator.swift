@@ -10,7 +10,7 @@ import Foundation
 protocol Coordinator: AnyObject {
     
     var childCoordinators: [Coordinator] { get set }
-    var navigator: Navigator { set }
+    var navigator: Navigator { get set }
     var baseViewController: ViewController? { get set }
     var parentCoordinator: Coordinator? { get set }
     
