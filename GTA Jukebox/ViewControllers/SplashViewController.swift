@@ -28,7 +28,7 @@ final class SplashViewController: GenericViewController <SplashView>, SplashScre
     
     func presentNextScreen() {
         let mainVC = MainViewController()
-        mainVC.modalPresentationStyle = .fullScreen
+        mainVC.modalPresentationStyle = .overFullScreen
         self.present(mainVC, animated: true)
     }
     

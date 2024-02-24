@@ -21,6 +21,11 @@ final class MainView: UIView {
     public init() {
         super.init(frame: .zero)
         backgroundColor = .black
+        DispatchQueue.main.async {
+            UIImageView.animate(withDuration: 0.8, delay: 0.5, options: [.repeat, .autoreverse]) {
+                self.antennaImage.transform = CGAffineTransform(scaleX: 1.2, y: 1.2)
+            }
+        }
     }
     
     required init?(coder: NSCoder) {
@@ -35,15 +40,15 @@ final class MainView: UIView {
         NSLayoutConstraint.activate([
             titleImage.centerXAnchor.constraint(equalTo: centerXAnchor),
             titleImage.centerYAnchor.constraint(equalTo: centerYAnchor, constant: -270),
-            titleImage.heightAnchor.constraint(equalToConstant: 200),
-            titleImage.widthAnchor.constraint(equalToConstant: 280)
+            titleImage.heightAnchor.constraint(equalToConstant: 160),
+            titleImage.widthAnchor.constraint(equalToConstant: 260)
         ])
         
         addSubview(title)
         title.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
             title.centerXAnchor.constraint(equalTo: centerXAnchor),
-            title.centerYAnchor.constraint(equalTo: centerYAnchor, constant: -145),
+            title.centerYAnchor.constraint(equalTo: centerYAnchor, constant: -155),
             title.heightAnchor.constraint(equalToConstant: 100),
             title.widthAnchor.constraint(equalToConstant: 240)
         ])
@@ -61,7 +66,7 @@ final class MainView: UIView {
         gameSelectionImage.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
             gameSelectionImage.centerXAnchor.constraint(equalTo: centerXAnchor),
-            gameSelectionImage.centerYAnchor.constraint(equalTo: centerYAnchor, constant: 200),
+            gameSelectionImage.centerYAnchor.constraint(equalTo: centerYAnchor, constant: 180),
             gameSelectionImage.heightAnchor.constraint(equalToConstant: 150),
             gameSelectionImage.widthAnchor.constraint(equalToConstant: 200)
         ])
@@ -70,7 +75,7 @@ final class MainView: UIView {
         leftButton.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
             leftButton.centerXAnchor.constraint(equalTo: centerXAnchor, constant: -120),
-            leftButton.centerYAnchor.constraint(equalTo: centerYAnchor, constant: 200),
+            leftButton.centerYAnchor.constraint(equalTo: centerYAnchor, constant: 180),
             leftButton.heightAnchor.constraint(equalToConstant: 60),
             leftButton.widthAnchor.constraint(equalToConstant: 60)
         ])
@@ -79,7 +84,7 @@ final class MainView: UIView {
         rightButton.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
             rightButton.centerXAnchor.constraint(equalTo: centerXAnchor, constant: 120),
-            rightButton.centerYAnchor.constraint(equalTo: centerYAnchor, constant: 200),
+            rightButton.centerYAnchor.constraint(equalTo: centerYAnchor, constant: 180),
             rightButton.heightAnchor.constraint(equalToConstant: 60),
             rightButton.widthAnchor.constraint(equalToConstant: 60)
         ])
@@ -88,8 +93,8 @@ final class MainView: UIView {
         select.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
             select.centerXAnchor.constraint(equalTo: centerXAnchor),
-            select.centerYAnchor.constraint(equalTo: centerYAnchor, constant: 320),
-            select.heightAnchor.constraint(equalToConstant: 80),
+            select.centerYAnchor.constraint(equalTo: centerYAnchor, constant: 300),
+            select.heightAnchor.constraint(equalToConstant: 60),
             select.widthAnchor.constraint(equalToConstant: 130)
         ])
     }
@@ -112,15 +117,13 @@ final class MainView: UIView {
     private let antennaImage: UIImageView = {
         let antennaImage = UIImageView()
         antennaImage.image = UIImage(named: "antenna")
-        UIImageView.animate(withDuration: 0.8, delay: 0.5, options: [.repeat, .autoreverse]) {
-            antennaImage.transform = CGAffineTransform(scaleX: 1.2, y: 1.2)
-        }
         return antennaImage
     }()
     
     public lazy var gameSelectionImage: UIImageView = {
         let gameImage = UIImageView()
         gameImage.image = UIImage(named: gameSelection.rawValue)
+        gameImage.contentMode = .scaleAspectFill
         return gameImage
     }()
     
@@ -155,11 +158,10 @@ final class MainView: UIView {
        let selectButton = UIButton()
         selectButton.setTitle("Select", for: .normal)
         selectButton.titleLabel?.font = UIFont(name: "PricedownBl-Regular", size: 30)
-        selectButton.titleLabel?.tintColor = .white
-        selectButton.backgroundColor = .clear
+        selectButton.setTitleColor(.black, for: .normal)
+        selectButton.backgroundColor = .systemGreen
         selectButton.layer.cornerRadius = 8
         selectButton.layer.borderWidth = 3
-        selectButton.layer.borderColor = UIColor.systemGreen.cgColor
         return selectButton
     }()
     
