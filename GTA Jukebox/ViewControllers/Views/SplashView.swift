@@ -43,7 +43,7 @@ final class SplashView: UIView {
     private let studioImage: UIImageView = {
         let studioImage = UIImageView()
         studioImage.image = UIImage(named: "Rockstar")
-        UIImageView.animate(withDuration: 1.5, delay: 0.1, options: [.beginFromCurrentState, .transitionCrossDissolve]) {
+        UIImageView.animate(withDuration: 1.5, delay: 0.2, options: [.beginFromCurrentState, .transitionCrossDissolve]) {
             studioImage.transform = CGAffineTransform(scaleX: 1.2, y: 1.2)
         }
         return studioImage

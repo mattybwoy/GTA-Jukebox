@@ -10,12 +10,11 @@ A radio player displaying the various radio channels and songs based on the GTA 
 
 ## Progress
 - Launch screen created 
+- Splash screen created with animation
 
 ## Improvements
 
 ## Testing
-
-## Installation
 
 ## Screenshots
 
