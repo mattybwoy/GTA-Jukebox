@@ -1,5 +1,6 @@
 <h1 align="center">
 <img src="Documentation/GTA.png" width="15%" height="15%">
+  <br>
 GTA Jukebox
 
 </h1>
