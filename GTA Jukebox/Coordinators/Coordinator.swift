@@ -10,15 +10,15 @@ import Foundation
 public protocol Coordinator: AnyObject {
     
     var childCoordinators: [Coordinator] { get set }
-    var navigator: Navigator { get set }
+    var navigator: Navigator { get }
     var baseViewController: ViewController? { get set }
     var parentCoordinator: Coordinator? { get set }
     
     func finish(animated: Bool)
-    func start(transition: Transition, onDismissed: (() -> Void?))
+    func start(transition: Transition, onDismissed: (() -> Void)?)
     func startChild(_ child: Coordinator,
                     transition: Transition,
-                    onDismissed: (() -> Void?)
+                    onDismissed: (() -> Void)?
     )
 }
 

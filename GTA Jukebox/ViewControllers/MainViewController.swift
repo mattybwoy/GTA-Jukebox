@@ -11,13 +11,9 @@ final class MainViewController: GenericViewController <MainView>, GameSelectionD
     
     private var viewModel = MainViewModel(gameState: .gta3)
     
-    init() {
-        super.init(nibName: nil, bundle: nil)
+    override init() {
+        super.init()
         viewModel.GameSelectionDelegate = self
-    }
-    
-    required init?(coder: NSCoder) {
-        super.init(coder: coder)
     }
     
     override func viewDidLoad() {

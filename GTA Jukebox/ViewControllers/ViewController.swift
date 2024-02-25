@@ -80,11 +80,12 @@ public extension ViewController {
         return navigationController
     }
     
-    func show(_viewController: ViewController, sender: Any?) {
-        guard let selfAsUIViewController = self as? UIViewController,
-              let vcAsUIViewController = _viewController as? UIViewController
+    func show(_ vc: ViewController, sender: Any?) {
+        guard
+            let selfAsUIViewController = self as? UIViewController,
+            let vcAsUIViewController = vc as? UIViewController
         else { return }
-        
+
         selfAsUIViewController.show(vcAsUIViewController, sender: sender)
     }
     

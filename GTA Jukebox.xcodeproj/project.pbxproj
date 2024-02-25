@@ -197,6 +197,8 @@
 				0AC2444A2B8A632D00F33D92 /* Protocols */,
 				0AC2443F2B8A0DE500F33D92 /* Navigation */,
 				341E421F2AC9B87D00681B63 /* ViewControllers */,
+				341E42242AC9BEBC00681B63 /* Views */,
+				0AC244392B8A099E00F33D92 /* ViewModels */,
 				341E42252AC9C38800681B63 /* Fonts */,
 				341E41EF2AC99C5E00681B63 /* Main.storyboard */,
 				341E41F22AC99C6100681B63 /* Assets.xcassets */,
@@ -234,13 +236,11 @@
 			isa = PBXGroup;
 			children = (
 				0AC2444D2B8B427700F33D92 /* NavigationController.swift */,
+				0AC244552B8B4EBE00F33D92 /* BasicViewController.swift */,
 				0AC244482B8A603900F33D92 /* ViewController.swift */,
 				341E42202AC9BE0100681B63 /* GenericViewController.swift */,
 				341E41ED2AC99C5E00681B63 /* MainViewController.swift */,
 				0AC244352B8681B400F33D92 /* SplashScreenViewController.swift */,
-				341E42242AC9BEBC00681B63 /* Views */,
-				0AC244392B8A099E00F33D92 /* ViewModels */,
-				0AC244552B8B4EBE00F33D92 /* BasicViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";

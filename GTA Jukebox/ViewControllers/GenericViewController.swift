@@ -7,7 +7,7 @@
 
 import UIKit
 
-class GenericViewController<T: UIView>: UIViewController {
+class GenericViewController<T: UIView>: BasicViewController {
     
     public var rootView: T { return view as! T }
     

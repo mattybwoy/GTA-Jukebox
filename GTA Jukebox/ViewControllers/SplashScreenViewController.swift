@@ -9,13 +9,9 @@ import UIKit
 
 final class SplashScreenViewController: GenericViewController <SplashView>, SplashScreenDelegate {
     
-    init() {
-        super.init(nibName: nil, bundle: nil)
+   override init() {
+       super.init()
         rootView.splashDelegate = self
-    }
-    
-    required init?(coder: NSCoder) {
-        super.init(coder: coder)
     }
     
     override func viewDidLoad() {
