@@ -1,5 +1,5 @@
 //
-//  SplashViewController.swift
+//  SplashScreenViewController.swift
 //  GTA Jukebox
 //
 //  Created by Matthew Lock on 21/02/2024.
@@ -7,7 +7,7 @@
 
 import UIKit
 
-final class SplashViewController: GenericViewController <SplashView>, SplashScreenDelegate {
+final class SplashScreenViewController: GenericViewController <SplashView>, SplashScreenDelegate {
     
     init() {
         super.init(nibName: nil, bundle: nil)

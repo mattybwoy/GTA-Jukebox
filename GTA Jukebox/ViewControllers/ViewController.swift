@@ -9,11 +9,26 @@ import UIKit
 
 public protocol ViewController: AnyObject, Dismissable {
     
+    var title: String? { get set }
+    var isBeingDismissed: Bool { get }
+    var isBeingPresented: Bool { get }
+    var isMovingFromParent: Bool { get }
+    var isMovingToParent: Bool { get }
     var modalPresentationStyle: UIModalPresentationStyle { get set }
+    var modalTransitionStyle: UIModalTransitionStyle { get set }
     var isModalInPresentation: Bool { get set }
+    var definesPresentationContext: Bool { get set }
+    var providesPresentationContextTransitionStyle: Bool { get set }
+    var disablesAutomaticKeyboardDismissal: Bool { get }
+    var overrideUserInterfaceStyle: UIUserInterfaceStyle { get set }
     var presentingViewController: ViewController? { get }
     var presentedViewController: ViewController? { get }
     var presentationController: UIPresentationController? { get }
+    var sheetPresentationController: UISheetPresentationController? { get }
+    var activePresentationController: UIPresentationController? { get }
+    var navigationController: NavigationController? { get }
+    var tabBarController: UITabBarController? { get }
+    var hidesBottomBarWhenPushed: Bool { get set }
     
     func loadView()
     func viewDidLoad()
@@ -23,6 +38,11 @@ public protocol ViewController: AnyObject, Dismissable {
     func viewDidAppear(_ animated: Bool)
     func viewWillDisappear(_ animated: Bool)
     func viewDidDisappear(_ animated: Bool)
+    
+    func viewSafeAreaInsetsDidChange()
+    func viewWillLayoutSubviews()
+    func viewDidLayoutSubviews()
+    func updateViewConstraints()
     
     func show(_ vc: ViewController, sender: Any?)
     func showDetailViewController(_ vc: ViewController, sender: Any?)
@@ -68,6 +88,15 @@ public extension ViewController {
         selfAsUIViewController.show(vcAsUIViewController, sender: sender)
     }
     
+    func showDetailViewController(_ vc: ViewController, sender: Any?) {
+        guard
+            let selfAsUIViewController = self as? UIViewController,
+            let vcAsUIViewController = vc as? UIViewController
+        else { return }
+
+        selfAsUIViewController.showDetailViewController(vcAsUIViewController, sender: sender)
+    }
+    
     func present(_ viewControllerToPresent: ViewController, animated flag: Bool, completion: (() -> Void)?) {
         guard
             let selfAsUIViewController = self as? UIViewController,
@@ -88,4 +117,5 @@ public extension ViewController {
 
         selfAsUIViewController.dismiss(animated: flag, completion: nil)
     }
+    
 }

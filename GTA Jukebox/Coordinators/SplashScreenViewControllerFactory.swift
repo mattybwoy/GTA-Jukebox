@@ -1,0 +1,20 @@
+//
+//  SplashScreenViewControllerFactory.swift
+//  GTA Jukebox
+//
+//  Created by Matthew Lock on 25/02/2024.
+//
+
+import Foundation
+
+protocol SplashScreenViewControllerFactory {
+    func makeSplashScreenViewController(navigationDelegate: SplashNavigationDelegate, onDismissed: (() -> Void)?) -> SplashScreenViewController
+}
+
+extension DependencyContainer: SplashScreenViewControllerFactory {
+    func makeSplashScreenViewController(navigationDelegate: SplashNavigationDelegate, onDismissed: (() -> Void)?) -> SplashScreenViewController {
+        let splashScreenViewController = SplashScreenViewController()
+        splashScreenViewController.onDismissed = onDismissed
+        return splashScreenViewController
+    }
+}

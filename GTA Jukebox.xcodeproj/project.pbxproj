@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		0AC244342B7EA60000F33D92 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AC244332B7EA60000F33D92 /* MainViewModel.swift */; };
-		0AC244362B8681B400F33D92 /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AC244352B8681B400F33D92 /* SplashViewController.swift */; };
+		0AC244362B8681B400F33D92 /* SplashScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AC244352B8681B400F33D92 /* SplashScreenViewController.swift */; };
 		0AC244382B8681F000F33D92 /* SplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AC244372B8681F000F33D92 /* SplashView.swift */; };
 		0AC2443B2B8A0A3C00F33D92 /* DependencyContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AC2443A2B8A0A3C00F33D92 /* DependencyContainer.swift */; };
 		0AC2443E2B8A0DA200F33D92 /* SplashCoordinatorFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AC2443D2B8A0DA200F33D92 /* SplashCoordinatorFactory.swift */; };
@@ -18,6 +18,15 @@
 		0AC244472B8A5BD900F33D92 /* Navigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AC244462B8A5BD900F33D92 /* Navigator.swift */; };
 		0AC244492B8A603900F33D92 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AC244482B8A603900F33D92 /* ViewController.swift */; };
 		0AC2444C2B8A635300F33D92 /* Dismissable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AC2444B2B8A635300F33D92 /* Dismissable.swift */; };
+		0AC2444E2B8B427700F33D92 /* NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AC2444D2B8B427700F33D92 /* NavigationController.swift */; };
+		0AC244502B8B4A3700F33D92 /* SplashScreenViewControllerFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AC2444F2B8B4A3700F33D92 /* SplashScreenViewControllerFactory.swift */; };
+		0AC244542B8B4BCD00F33D92 /* SplashNavigationDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AC244532B8B4BCD00F33D92 /* SplashNavigationDelegate.swift */; };
+		0AC244562B8B4EBE00F33D92 /* BasicViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AC244552B8B4EBE00F33D92 /* BasicViewController.swift */; };
+		0AC244582B8B534000F33D92 /* Window.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AC244572B8B534000F33D92 /* Window.swift */; };
+		0AC2445A2B8B574A00F33D92 /* AppNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AC244592B8B574A00F33D92 /* AppNavigator.swift */; };
+		0AC2445C2B8B579300F33D92 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AC2445B2B8B579300F33D92 /* AppCoordinator.swift */; };
+		0AC2445E2B8B5A2100F33D92 /* BasicNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AC2445D2B8B5A2100F33D92 /* BasicNavigator.swift */; };
+		0AC244602B8B5ADA00F33D92 /* BasicNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AC2445F2B8B5ADA00F33D92 /* BasicNavigationController.swift */; };
 		341E41EA2AC99C5E00681B63 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 341E41E92AC99C5E00681B63 /* AppDelegate.swift */; };
 		341E41EC2AC99C5E00681B63 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 341E41EB2AC99C5E00681B63 /* SceneDelegate.swift */; };
 		341E41EE2AC99C5E00681B63 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 341E41ED2AC99C5E00681B63 /* MainViewController.swift */; };
@@ -51,7 +60,7 @@
 
 /* Begin PBXFileReference section */
 		0AC244332B7EA60000F33D92 /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
-		0AC244352B8681B400F33D92 /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
+		0AC244352B8681B400F33D92 /* SplashScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreenViewController.swift; sourceTree = "<group>"; };
 		0AC244372B8681F000F33D92 /* SplashView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashView.swift; sourceTree = "<group>"; };
 		0AC2443A2B8A0A3C00F33D92 /* DependencyContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DependencyContainer.swift; sourceTree = "<group>"; };
 		0AC2443D2B8A0DA200F33D92 /* SplashCoordinatorFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashCoordinatorFactory.swift; sourceTree = "<group>"; };
@@ -61,6 +70,15 @@
 		0AC244462B8A5BD900F33D92 /* Navigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Navigator.swift; sourceTree = "<group>"; };
 		0AC244482B8A603900F33D92 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		0AC2444B2B8A635300F33D92 /* Dismissable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dismissable.swift; sourceTree = "<group>"; };
+		0AC2444D2B8B427700F33D92 /* NavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationController.swift; sourceTree = "<group>"; };
+		0AC2444F2B8B4A3700F33D92 /* SplashScreenViewControllerFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreenViewControllerFactory.swift; sourceTree = "<group>"; };
+		0AC244532B8B4BCD00F33D92 /* SplashNavigationDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashNavigationDelegate.swift; sourceTree = "<group>"; };
+		0AC244552B8B4EBE00F33D92 /* BasicViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicViewController.swift; sourceTree = "<group>"; };
+		0AC244572B8B534000F33D92 /* Window.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Window.swift; sourceTree = "<group>"; };
+		0AC244592B8B574A00F33D92 /* AppNavigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppNavigator.swift; sourceTree = "<group>"; };
+		0AC2445B2B8B579300F33D92 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
+		0AC2445D2B8B5A2100F33D92 /* BasicNavigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicNavigator.swift; sourceTree = "<group>"; };
+		0AC2445F2B8B5ADA00F33D92 /* BasicNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicNavigationController.swift; sourceTree = "<group>"; };
 		341E41E62AC99C5E00681B63 /* GTA Jukebox.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "GTA Jukebox.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		341E41E92AC99C5E00681B63 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		341E41EB2AC99C5E00681B63 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -117,9 +135,11 @@
 			isa = PBXGroup;
 			children = (
 				0AC2443D2B8A0DA200F33D92 /* SplashCoordinatorFactory.swift */,
+				0AC2444F2B8B4A3700F33D92 /* SplashScreenViewControllerFactory.swift */,
 				0AC244402B8A0ED300F33D92 /* SplashCoordinator.swift */,
 				0AC244422B8A0F3100F33D92 /* Coordinator.swift */,
 				0AC244442B8A104200F33D92 /* Transition.swift */,
+				0AC2445B2B8B579300F33D92 /* AppCoordinator.swift */,
 			);
 			path = Coordinators;
 			sourceTree = "<group>";
@@ -128,6 +148,10 @@
 			isa = PBXGroup;
 			children = (
 				0AC244462B8A5BD900F33D92 /* Navigator.swift */,
+				0AC244532B8B4BCD00F33D92 /* SplashNavigationDelegate.swift */,
+				0AC244592B8B574A00F33D92 /* AppNavigator.swift */,
+				0AC2445D2B8B5A2100F33D92 /* BasicNavigator.swift */,
+				0AC2445F2B8B5ADA00F33D92 /* BasicNavigationController.swift */,
 			);
 			path = Navigation;
 			sourceTree = "<group>";
@@ -167,6 +191,7 @@
 			children = (
 				341E41E92AC99C5E00681B63 /* AppDelegate.swift */,
 				341E41EB2AC99C5E00681B63 /* SceneDelegate.swift */,
+				0AC244572B8B534000F33D92 /* Window.swift */,
 				0AC2443A2B8A0A3C00F33D92 /* DependencyContainer.swift */,
 				0AC2443C2B8A0D8900F33D92 /* Coordinators */,
 				0AC2444A2B8A632D00F33D92 /* Protocols */,
@@ -208,12 +233,14 @@
 		341E421F2AC9B87D00681B63 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				0AC2444D2B8B427700F33D92 /* NavigationController.swift */,
 				0AC244482B8A603900F33D92 /* ViewController.swift */,
 				341E42202AC9BE0100681B63 /* GenericViewController.swift */,
 				341E41ED2AC99C5E00681B63 /* MainViewController.swift */,
-				0AC244352B8681B400F33D92 /* SplashViewController.swift */,
+				0AC244352B8681B400F33D92 /* SplashScreenViewController.swift */,
 				341E42242AC9BEBC00681B63 /* Views */,
 				0AC244392B8A099E00F33D92 /* ViewModels */,
+				0AC244552B8B4EBE00F33D92 /* BasicViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -368,20 +395,29 @@
 			buildActionMask = 2147483647;
 			files = (
 				0AC244492B8A603900F33D92 /* ViewController.swift in Sources */,
+				0AC244562B8B4EBE00F33D92 /* BasicViewController.swift in Sources */,
 				341E41EE2AC99C5E00681B63 /* MainViewController.swift in Sources */,
 				0AC244382B8681F000F33D92 /* SplashView.swift in Sources */,
 				341E41EA2AC99C5E00681B63 /* AppDelegate.swift in Sources */,
 				341E42212AC9BE0100681B63 /* GenericViewController.swift in Sources */,
+				0AC2445C2B8B579300F33D92 /* AppCoordinator.swift in Sources */,
+				0AC2444E2B8B427700F33D92 /* NavigationController.swift in Sources */,
 				341E42232AC9BEB800681B63 /* MainView.swift in Sources */,
 				0AC244412B8A0ED300F33D92 /* SplashCoordinator.swift in Sources */,
+				0AC244542B8B4BCD00F33D92 /* SplashNavigationDelegate.swift in Sources */,
 				0AC244452B8A104200F33D92 /* Transition.swift in Sources */,
+				0AC2445A2B8B574A00F33D92 /* AppNavigator.swift in Sources */,
 				0AC244472B8A5BD900F33D92 /* Navigator.swift in Sources */,
 				341E41EC2AC99C5E00681B63 /* SceneDelegate.swift in Sources */,
-				0AC244362B8681B400F33D92 /* SplashViewController.swift in Sources */,
+				0AC244602B8B5ADA00F33D92 /* BasicNavigationController.swift in Sources */,
+				0AC244362B8681B400F33D92 /* SplashScreenViewController.swift in Sources */,
 				0AC244432B8A0F3100F33D92 /* Coordinator.swift in Sources */,
 				0AC2444C2B8A635300F33D92 /* Dismissable.swift in Sources */,
+				0AC244502B8B4A3700F33D92 /* SplashScreenViewControllerFactory.swift in Sources */,
 				0AC2443B2B8A0A3C00F33D92 /* DependencyContainer.swift in Sources */,
+				0AC2445E2B8B5A2100F33D92 /* BasicNavigator.swift in Sources */,
 				0AC244342B7EA60000F33D92 /* MainViewModel.swift in Sources */,
+				0AC244582B8B534000F33D92 /* Window.swift in Sources */,
 				0AC2443E2B8A0DA200F33D92 /* SplashCoordinatorFactory.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
