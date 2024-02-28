@@ -1,5 +1,5 @@
 //
-//  MainViewController.swift
+//  SelectScreenViewController.swift
 //  GTA Jukebox
 //
 //  Created by Matthew Lock on 01/10/2023.
@@ -7,7 +7,7 @@
 
 import UIKit
 
-final class MainViewController: GenericViewController <MainView>, GameSelectionDelegate {
+final class SelectScreenViewController: GenericViewController <MainView>, GameSelectionDelegate {
     
     private var viewModel = MainViewModel(gameState: .gta3)
     
