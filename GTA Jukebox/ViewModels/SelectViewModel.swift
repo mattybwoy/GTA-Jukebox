@@ -1,5 +1,5 @@
 //
-//  MainViewModel.swift
+//  SelectViewModel.swift
 //  GTA Jukebox
 //
 //  Created by Matthew Lock on 15/02/2024.
@@ -18,20 +18,21 @@ public enum GameSelection: String {
     case sanAndreas = "SanAndreasLogo"
 }
 
-final class MainViewModel: LandingScreenDelegate {
+final class SelectViewModel: SelectScreenDelegate, SelectNavigationDelegate {
     
-    init(GameSelectionDelegate: GameSelectionDelegate? = nil, gameState: GameSelection) {
-        self.GameSelectionDelegate = GameSelectionDelegate
-        self.gameState = gameState
-    }
-    
+    let selectNavigationDelegate: SelectNavigationDelegate
     weak var GameSelectionDelegate: GameSelectionDelegate?
-    
     var gameState: GameSelection = GameSelection.gta3
     
-    func bind(to view: MainView) {
+    init(GameSelectionDelegate: GameSelectionDelegate? = nil, gameState: GameSelection = .gta3, selectNavigationDelegate: SelectNavigationDelegate) {
+        self.GameSelectionDelegate = GameSelectionDelegate
+        self.gameState = gameState
+        self.selectNavigationDelegate = selectNavigationDelegate
+    }
+    
+    func bind(to view: SelectView) {
         view.gameSelectionImage.image = UIImage(named: "GTA3Logo")
-        view.landingDelegate = self
+        view.selectDelegate = self
     }
     
     func previousGame(gameImage: String) {
@@ -64,6 +65,10 @@ final class MainViewModel: LandingScreenDelegate {
         default:
             return
         }
+    }
+    
+    func selectButtonTapped() {
+        print(gameState.rawValue)
     }
     
 }

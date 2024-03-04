@@ -8,15 +8,5 @@
 import Foundation
 
 protocol SelectNavigationDelegate: AnyObject {
-    func toGameSelection()
-}
-
-struct SelectViewModel {
-    
-    let navigationDelegate: SelectNavigationDelegate
-    
-    func toGameSelection() {
-        navigationDelegate.toGameSelection()
-    }
-    
+    func selectButtonTapped()
 }

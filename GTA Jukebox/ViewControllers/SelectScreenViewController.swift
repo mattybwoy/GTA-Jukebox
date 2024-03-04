@@ -7,12 +7,13 @@
 
 import UIKit
 
-final class SelectScreenViewController: GenericViewController <MainView>, GameSelectionDelegate {
+final class SelectScreenViewController: GenericViewController <SelectView>, GameSelectionDelegate {
     
-    private var viewModel = MainViewModel(gameState: .gta3)
+    private var viewModel: SelectViewModel!
     
-    override init() {
+    init(viewModel: SelectViewModel) {
         super.init()
+        self.viewModel = viewModel
         viewModel.GameSelectionDelegate = self
     }
     
@@ -22,7 +23,7 @@ final class SelectScreenViewController: GenericViewController <MainView>, GameSe
     }
     
     override func loadView() {
-        self.view = MainView()
+        self.view = SelectView()
     }
     
     func didUpdateGame(newGame: String) {

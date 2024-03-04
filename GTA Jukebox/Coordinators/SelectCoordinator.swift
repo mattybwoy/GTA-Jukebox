@@ -7,13 +7,13 @@
 
 import UIKit
 
-final class SelectCoordinator: Coordinator, SelectNavigationDelegate {
-    
+final class SelectCoordinator: Coordinator {
+
     typealias Factory = SelectScreenViewControllerFactory
     
     var childCoordinators: [Coordinator] = []
     var navigator: Navigator
-    var baseViewController: ViewController?
+    weak var baseViewController: ViewController?
     var parentCoordinator: Coordinator?
     let factory: Factory
     
@@ -27,9 +27,14 @@ final class SelectCoordinator: Coordinator, SelectNavigationDelegate {
         baseViewController = viewController
         navigator.navigate(to: viewController, transition: transition)
     }
+    
 }
 
-extension SelectCoordinator {
+extension SelectCoordinator: SelectNavigationDelegate {
+    
+    func selectButtonTapped() {
+        //TODO
+    }
     
     func toGameSelection() {
         //TODO

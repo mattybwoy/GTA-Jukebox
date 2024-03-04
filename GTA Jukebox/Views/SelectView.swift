@@ -1,5 +1,5 @@
 //
-//  MainView.swift
+//  SelectView.swift
 //  GTA Jukebox
 //
 //  Created by Matthew Lock on 01/10/2023.
@@ -7,15 +7,15 @@
 
 import UIKit
 
-protocol LandingScreenDelegate: AnyObject {
+protocol SelectScreenDelegate: AnyObject {
     func previousGame(gameImage: String)
     func nextGame(gameImage: String)
     var gameState: GameSelection { get set }
 }
 
-final class MainView: UIView {
+final class SelectView: UIView {
 
-    weak var landingDelegate: LandingScreenDelegate?
+    weak var selectDelegate: SelectScreenDelegate?
     public var gameSelection: GameSelection = .gta3
     
     public init() {
@@ -166,11 +166,11 @@ final class MainView: UIView {
     }()
     
     @objc func previousGame() {
-        landingDelegate?.previousGame(gameImage: gameSelection.rawValue)
+        selectDelegate?.previousGame(gameImage: gameSelection.rawValue)
     }
     
     @objc func nextGame() {
-        landingDelegate?.nextGame(gameImage: gameSelection.rawValue)
+        selectDelegate?.nextGame(gameImage: gameSelection.rawValue)
     }
     
 }

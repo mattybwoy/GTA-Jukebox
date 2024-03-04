@@ -9,7 +9,7 @@ import UIKit
 
 final class SplashCoordinator: Coordinator {
     
-    typealias Factory = SplashScreenViewControllerFactory
+    typealias Factory = SplashScreenViewControllerFactory & SelectScreenViewControllerFactory & SelectCoordinatorFactory
     
     var childCoordinators: [Coordinator] = []
     unowned let navigator: Navigator
@@ -30,10 +30,16 @@ final class SplashCoordinator: Coordinator {
     
 }
 
-extension SplashCoordinator: SplashNavigationDelegate {
+extension SplashCoordinator: SplashNavigationDelegate, SelectNavigationDelegate {
+    
+    func selectButtonTapped() {
+        //
+    }
+    
     
     func toGameSelection() {
-        //TODO
+        let coordinator = factory.makeSelectCoordinator(navigator: navigator)
+        startChild(coordinator, transition: .push(animated: true), onDismissed: nil)
     }
     
 }

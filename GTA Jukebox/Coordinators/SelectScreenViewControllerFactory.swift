@@ -13,7 +13,8 @@ protocol SelectScreenViewControllerFactory {
 
 extension DependencyContainer: SelectScreenViewControllerFactory {
     func makeSelectScreenViewController(navigationDelegate: SelectNavigationDelegate, onDismissed: (() -> Void)?) -> SelectScreenViewController {
-        let selectScreenViewController = SelectScreenViewController()
+        let selectViewModel = SelectViewModel(gameState: .gta3, selectNavigationDelegate: navigationDelegate)
+        let selectScreenViewController = SelectScreenViewController(viewModel: selectViewModel)
         selectScreenViewController.onDismissed = onDismissed
         return selectScreenViewController
     }
