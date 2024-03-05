@@ -9,10 +9,10 @@ import UIKit
 
 final class SplashCoordinator: Coordinator {
     
-    typealias Factory = SplashScreenViewControllerFactory & SelectScreenViewControllerFactory & SelectCoordinatorFactory
+    typealias Factory = SplashScreenViewControllerFactory & SelectCoordinatorFactory
     
     var childCoordinators: [Coordinator] = []
-    unowned let navigator: Navigator
+    let navigator: Navigator
     let factory: Factory
     weak var baseViewController: ViewController?
     unowned var parentCoordinator: Coordinator?
@@ -24,7 +24,6 @@ final class SplashCoordinator: Coordinator {
     
     func start(transition: Transition, onDismissed: (() -> Void)?) {
         let viewController: ViewController = factory.makeSplashScreenViewController(navigationDelegate: self, onDismissed: onDismissed)
-        baseViewController = viewController
         navigator.navigate(to: viewController, transition: transition)
     }
     
