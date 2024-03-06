@@ -18,7 +18,7 @@ public enum GameSelection: String {
     case sanAndreas = "SanAndreasLogo"
 }
 
-final class SelectViewModel: SelectScreenDelegate, SelectNavigationDelegate {
+final class SelectViewModel: SelectScreenDelegate {
     
     let selectNavigationDelegate: SelectNavigationDelegate
     weak var GameSelectionDelegate: GameSelectionDelegate?
@@ -67,7 +67,14 @@ final class SelectViewModel: SelectScreenDelegate, SelectNavigationDelegate {
         }
     }
     
+
+    
+}
+
+extension SelectViewModel: SelectNavigationDelegate {
+    
     func selectButtonTapped() {
+        //Should navigate to next screen
         print(gameState.rawValue)
     }
     

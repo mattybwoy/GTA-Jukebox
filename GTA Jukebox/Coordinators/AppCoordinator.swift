@@ -25,10 +25,11 @@ final class AppCoordinator: Coordinator {
 
     func start(transition: Transition, onDismissed: (() -> Void)?) {
         let navigationController = BasicNavigationController()
+        navigationController.isNavigationBarHidden = true
         navigator.navigate(to: navigationController, transition: transition)
         let navigator = BasicNavigator(navigationController: navigationController)
         let splashCoordinator = factory.makeSplashCoordinator(navigator: navigator)
         startChild(splashCoordinator, transition: .push(animated: true), onDismissed: nil)
-        
     }
+    
 }

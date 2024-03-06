@@ -7,13 +7,13 @@
 
 import UIKit
 
-final class SplashScreenViewController: GenericViewController <SplashView>, SplashScreenDelegate, SplashNavigationDelegate {
+final class SplashScreenViewController: GenericViewController <SplashView> {
     
     private let viewModel: SplashViewModel
     
     init(viewModel: SplashViewModel) {
         self.viewModel = viewModel
-       super.init()
+        super.init()
         rootView.splashDelegate = self
     }
     
@@ -25,14 +25,11 @@ final class SplashScreenViewController: GenericViewController <SplashView>, Spla
         self.view = SplashView()
     }
     
-    func presentNextScreen() {
-        toGameSelection()
-        //let mainVC = MainViewController()
-        //mainVC.modalPresentationStyle = .overFullScreen
-        //self.present(mainVC, animated: true)
-    }
+}
+
+extension SplashScreenViewController: SplashScreenDelegate {
     
-    func toGameSelection() {
+    func presentNextScreen() {
         viewModel.toGameSelection()
     }
     

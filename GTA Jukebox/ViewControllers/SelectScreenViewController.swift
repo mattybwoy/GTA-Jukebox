@@ -7,7 +7,7 @@
 
 import UIKit
 
-final class SelectScreenViewController: GenericViewController <SelectView>, GameSelectionDelegate {
+final class SelectScreenViewController: GenericViewController <SelectView> {
     
     private var viewModel: SelectViewModel!
     
@@ -25,6 +25,10 @@ final class SelectScreenViewController: GenericViewController <SelectView>, Game
     override func loadView() {
         self.view = SelectView()
     }
+    
+}
+
+extension SelectScreenViewController: GameSelectionDelegate {
     
     func didUpdateGame(newGame: String) {
         rootView.gameSelection = viewModel.gameState
