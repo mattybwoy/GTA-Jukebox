@@ -8,5 +8,5 @@
 import Foundation
 
 protocol SelectNavigationDelegate: AnyObject {
-    func selectButtonTapped()
+    func selectButtonTapped(game: GameSelection)
 }

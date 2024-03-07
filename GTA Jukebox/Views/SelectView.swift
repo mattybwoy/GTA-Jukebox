@@ -10,12 +10,12 @@ import UIKit
 protocol SelectScreenDelegate: AnyObject {
     func previousGame(gameImage: String)
     func nextGame(gameImage: String)
-    var gameState: GameSelection { get set }
+    func selectTapped(gameSelected: GameSelection)
 }
 
 final class SelectView: UIView {
 
-    weak var selectDelegate: SelectScreenDelegate?
+    public weak var selectDelegate: SelectScreenDelegate?
     public var gameSelection: GameSelection = .gta3
     
     public init() {
@@ -162,6 +162,7 @@ final class SelectView: UIView {
         selectButton.backgroundColor = .systemGreen
         selectButton.layer.cornerRadius = 8
         selectButton.layer.borderWidth = 3
+        selectButton.addTarget(self, action: #selector(selectTapped), for: .touchUpInside)
         return selectButton
     }()
     
@@ -171,6 +172,10 @@ final class SelectView: UIView {
     
     @objc func nextGame() {
         selectDelegate?.nextGame(gameImage: gameSelection.rawValue)
+    }
+    
+    @objc func selectTapped() {
+        selectDelegate?.selectTapped(gameSelected: gameSelection)
     }
     
 }

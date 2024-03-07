@@ -14,12 +14,12 @@ final class SelectScreenViewController: GenericViewController <SelectView> {
     init(viewModel: SelectViewModel) {
         super.init()
         self.viewModel = viewModel
-        viewModel.GameSelectionDelegate = self
+        viewModel.gameSelectionDelegate = self
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        viewModel.bind(to: rootView)
+        rootView.selectDelegate = self
     }
     
     override func loadView() {
@@ -33,6 +33,22 @@ extension SelectScreenViewController: GameSelectionDelegate {
     func didUpdateGame(newGame: String) {
         rootView.gameSelection = viewModel.gameState
         rootView.gameSelectionImage.image = UIImage(named: newGame)
+    }
+    
+}
+
+extension SelectScreenViewController: SelectScreenDelegate {
+    
+    func previousGame(gameImage: String) {
+        viewModel.previousGame(gameImage: gameImage)
+    }
+    
+    func nextGame(gameImage: String) {
+        viewModel.nextGame(gameImage: gameImage)
+    }
+    
+    func selectTapped(gameSelected: GameSelection) {
+        viewModel.selectButtonTapped(game: gameSelected)
     }
     
 }

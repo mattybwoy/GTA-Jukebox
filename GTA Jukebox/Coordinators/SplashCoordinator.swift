@@ -30,8 +30,7 @@ final class SplashCoordinator: Coordinator {
 }
 
 extension SplashCoordinator: SplashNavigationDelegate, SelectNavigationDelegate {
-    
-    func selectButtonTapped() {
+    func selectButtonTapped(game: GameSelection) {
         //
     }
     

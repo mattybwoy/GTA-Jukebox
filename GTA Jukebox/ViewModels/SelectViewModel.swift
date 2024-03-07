@@ -18,34 +18,27 @@ public enum GameSelection: String {
     case sanAndreas = "SanAndreasLogo"
 }
 
-final class SelectViewModel: SelectScreenDelegate {
+final class SelectViewModel {
     
     let selectNavigationDelegate: SelectNavigationDelegate
-    weak var GameSelectionDelegate: GameSelectionDelegate?
+    weak var gameSelectionDelegate: GameSelectionDelegate?
     var gameState: GameSelection = GameSelection.gta3
     
-    init(GameSelectionDelegate: GameSelectionDelegate? = nil, gameState: GameSelection = .gta3, selectNavigationDelegate: SelectNavigationDelegate) {
-        self.GameSelectionDelegate = GameSelectionDelegate
-        self.gameState = gameState
+    init(selectNavigationDelegate: SelectNavigationDelegate) {
         self.selectNavigationDelegate = selectNavigationDelegate
-    }
-    
-    func bind(to view: SelectView) {
-        view.gameSelectionImage.image = UIImage(named: "GTA3Logo")
-        view.selectDelegate = self
     }
     
     func previousGame(gameImage: String) {
         switch gameImage {
         case "SanAndreasLogo":
             gameState = GameSelection.viceCity
-            GameSelectionDelegate?.didUpdateGame(newGame: GameSelection.viceCity.rawValue)
+            gameSelectionDelegate?.didUpdateGame(newGame: GameSelection.viceCity.rawValue)
         case "ViceCityLogo":
             gameState = GameSelection.gta3
-            GameSelectionDelegate?.didUpdateGame(newGame: GameSelection.gta3.rawValue)
+            gameSelectionDelegate?.didUpdateGame(newGame: GameSelection.gta3.rawValue)
         case "GTA3Logo":
             gameState = GameSelection.sanAndreas
-            GameSelectionDelegate?.didUpdateGame(newGame: GameSelection.sanAndreas.rawValue)
+            gameSelectionDelegate?.didUpdateGame(newGame: GameSelection.sanAndreas.rawValue)
         default:
             return
         }
@@ -55,27 +48,25 @@ final class SelectViewModel: SelectScreenDelegate {
         switch gameImage {
         case "ViceCityLogo":
             gameState = GameSelection.sanAndreas
-            GameSelectionDelegate?.didUpdateGame(newGame: GameSelection.sanAndreas.rawValue)
+            gameSelectionDelegate?.didUpdateGame(newGame: GameSelection.sanAndreas.rawValue)
         case "SanAndreasLogo":
             gameState = GameSelection.gta3
-            GameSelectionDelegate?.didUpdateGame(newGame: GameSelection.gta3.rawValue)
+            gameSelectionDelegate?.didUpdateGame(newGame: GameSelection.gta3.rawValue)
         case "GTA3Logo":
             gameState = GameSelection.viceCity
-            GameSelectionDelegate?.didUpdateGame(newGame: GameSelection.viceCity.rawValue)
+            gameSelectionDelegate?.didUpdateGame(newGame: GameSelection.viceCity.rawValue)
         default:
             return
         }
     }
     
-
-    
 }
 
 extension SelectViewModel: SelectNavigationDelegate {
     
-    func selectButtonTapped() {
+    func selectButtonTapped(game: GameSelection) {
         //Should navigate to next screen
-        print(gameState.rawValue)
+        print(game.rawValue)
     }
     
 }

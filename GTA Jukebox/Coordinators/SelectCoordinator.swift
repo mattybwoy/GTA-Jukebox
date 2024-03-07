@@ -31,10 +31,10 @@ final class SelectCoordinator: Coordinator {
 }
 
 extension SelectCoordinator: SelectNavigationDelegate {
-    
-    func selectButtonTapped() {
+    func selectButtonTapped(game: GameSelection) {
         //TODO
     }
+
     
     func toGameSelection() {
         //TODO
