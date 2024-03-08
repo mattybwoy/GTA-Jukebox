@@ -31,7 +31,7 @@ final class SelectScreenViewController: GenericViewController <SelectView> {
 extension SelectScreenViewController: GameSelectionDelegate {
     
     func didUpdateGame(newGame: String) {
-        rootView.gameSelection = viewModel.gameState
+        rootView.gameSelection = viewModel.currentGameState
         rootView.gameSelectionImage.image = UIImage(named: newGame)
     }
     

@@ -9,7 +9,7 @@ import UIKit
 
 final class SelectCoordinator: Coordinator {
 
-    typealias Factory = SelectScreenViewControllerFactory
+    typealias Factory = SelectScreenViewControllerFactory & GameCoordinatorFactory
     
     var childCoordinators: [Coordinator] = []
     var navigator: Navigator
@@ -31,12 +31,10 @@ final class SelectCoordinator: Coordinator {
 }
 
 extension SelectCoordinator: SelectNavigationDelegate {
+    
     func selectButtonTapped(game: GameSelection) {
-        //TODO
+        let coordinator = factory.makeGameCoordinator(navigator: navigator)
+        startChild(coordinator, transition: .push(animated: true), onDismissed: nil)
     }
 
-    
-    func toGameSelection() {
-        //TODO
-    }
 }

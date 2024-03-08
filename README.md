@@ -11,6 +11,7 @@ A radio player displaying the various radio channels and songs based on the GTA 
 ## Progress
 - Launch screen created 
 - Splash screen created with animation
+- Navigation between screens now functional
 
 ## Improvements
 
@@ -21,4 +22,4 @@ A radio player displaying the various radio channels and songs based on the GTA 
 ## Demo
 
 ## Simulator version
-14 Pro
+15 Pro

@@ -29,12 +29,8 @@ final class SplashCoordinator: Coordinator {
     
 }
 
-extension SplashCoordinator: SplashNavigationDelegate, SelectNavigationDelegate {
-    func selectButtonTapped(game: GameSelection) {
-        //
-    }
-    
-    
+extension SplashCoordinator: SplashNavigationDelegate {
+
     func toGameSelection() {
         let coordinator = factory.makeSelectCoordinator(navigator: navigator)
         startChild(coordinator, transition: .push(animated: true), onDismissed: nil)

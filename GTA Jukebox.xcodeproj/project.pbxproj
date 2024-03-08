@@ -32,6 +32,13 @@
 		0AC244662B8FCBF600F33D92 /* SelectScreenViewControllerFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AC244652B8FCBF600F33D92 /* SelectScreenViewControllerFactory.swift */; };
 		0AC244682B8FCCC100F33D92 /* SelectNavigationDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AC244672B8FCCC100F33D92 /* SelectNavigationDelegate.swift */; };
 		0AC2446A2B96492F00F33D92 /* SplashViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AC244692B96492F00F33D92 /* SplashViewModel.swift */; };
+		0AC2446C2B9BA35E00F33D92 /* GameCoordinatorFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AC2446B2B9BA35E00F33D92 /* GameCoordinatorFactory.swift */; };
+		0AC2446E2B9BA3B100F33D92 /* GameScreenViewControllerFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AC2446D2B9BA3B100F33D92 /* GameScreenViewControllerFactory.swift */; };
+		0AC244702B9BA40D00F33D92 /* GameCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AC2446F2B9BA40D00F33D92 /* GameCoordinator.swift */; };
+		0AC244722B9BA4A300F33D92 /* GameNavigationDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AC244712B9BA4A300F33D92 /* GameNavigationDelegate.swift */; };
+		0AC244742B9BA4EB00F33D92 /* GameScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AC244732B9BA4EB00F33D92 /* GameScreenViewController.swift */; };
+		0AC244762B9BA54000F33D92 /* GameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AC244752B9BA54000F33D92 /* GameView.swift */; };
+		0AC244782B9BA5AB00F33D92 /* GameViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AC244772B9BA5AB00F33D92 /* GameViewModel.swift */; };
 		341E41EA2AC99C5E00681B63 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 341E41E92AC99C5E00681B63 /* AppDelegate.swift */; };
 		341E41EC2AC99C5E00681B63 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 341E41EB2AC99C5E00681B63 /* SceneDelegate.swift */; };
 		341E41EE2AC99C5E00681B63 /* SelectScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 341E41ED2AC99C5E00681B63 /* SelectScreenViewController.swift */; };
@@ -89,6 +96,13 @@
 		0AC244652B8FCBF600F33D92 /* SelectScreenViewControllerFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectScreenViewControllerFactory.swift; sourceTree = "<group>"; };
 		0AC244672B8FCCC100F33D92 /* SelectNavigationDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectNavigationDelegate.swift; sourceTree = "<group>"; };
 		0AC244692B96492F00F33D92 /* SplashViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewModel.swift; sourceTree = "<group>"; };
+		0AC2446B2B9BA35E00F33D92 /* GameCoordinatorFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameCoordinatorFactory.swift; sourceTree = "<group>"; };
+		0AC2446D2B9BA3B100F33D92 /* GameScreenViewControllerFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScreenViewControllerFactory.swift; sourceTree = "<group>"; };
+		0AC2446F2B9BA40D00F33D92 /* GameCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameCoordinator.swift; sourceTree = "<group>"; };
+		0AC244712B9BA4A300F33D92 /* GameNavigationDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameNavigationDelegate.swift; sourceTree = "<group>"; };
+		0AC244732B9BA4EB00F33D92 /* GameScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScreenViewController.swift; sourceTree = "<group>"; };
+		0AC244752B9BA54000F33D92 /* GameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameView.swift; sourceTree = "<group>"; };
+		0AC244772B9BA5AB00F33D92 /* GameViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewModel.swift; sourceTree = "<group>"; };
 		341E41E62AC99C5E00681B63 /* GTA Jukebox.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "GTA Jukebox.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		341E41E92AC99C5E00681B63 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		341E41EB2AC99C5E00681B63 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -136,8 +150,9 @@
 		0AC244392B8A099E00F33D92 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
-				0AC244332B7EA60000F33D92 /* SelectViewModel.swift */,
 				0AC244692B96492F00F33D92 /* SplashViewModel.swift */,
+				0AC244332B7EA60000F33D92 /* SelectViewModel.swift */,
+				0AC244772B9BA5AB00F33D92 /* GameViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -147,10 +162,13 @@
 			children = (
 				0AC2443D2B8A0DA200F33D92 /* SplashCoordinatorFactory.swift */,
 				0AC244612B8FCA2600F33D92 /* SelectCoordinatorFactory.swift */,
+				0AC2446B2B9BA35E00F33D92 /* GameCoordinatorFactory.swift */,
 				0AC2444F2B8B4A3700F33D92 /* SplashScreenViewControllerFactory.swift */,
 				0AC244652B8FCBF600F33D92 /* SelectScreenViewControllerFactory.swift */,
+				0AC2446D2B9BA3B100F33D92 /* GameScreenViewControllerFactory.swift */,
 				0AC244402B8A0ED300F33D92 /* SplashCoordinator.swift */,
 				0AC244632B8FCAE000F33D92 /* SelectCoordinator.swift */,
+				0AC2446F2B9BA40D00F33D92 /* GameCoordinator.swift */,
 				0AC244422B8A0F3100F33D92 /* Coordinator.swift */,
 				0AC244442B8A104200F33D92 /* Transition.swift */,
 				0AC2445B2B8B579300F33D92 /* AppCoordinator.swift */,
@@ -164,6 +182,7 @@
 				0AC244462B8A5BD900F33D92 /* Navigator.swift */,
 				0AC244532B8B4BCD00F33D92 /* SplashNavigationDelegate.swift */,
 				0AC244672B8FCCC100F33D92 /* SelectNavigationDelegate.swift */,
+				0AC244712B9BA4A300F33D92 /* GameNavigationDelegate.swift */,
 				0AC244592B8B574A00F33D92 /* AppNavigator.swift */,
 				0AC2445D2B8B5A2100F33D92 /* BasicNavigator.swift */,
 				0AC2445F2B8B5ADA00F33D92 /* BasicNavigationController.swift */,
@@ -256,6 +275,7 @@
 				341E42202AC9BE0100681B63 /* GenericViewController.swift */,
 				341E41ED2AC99C5E00681B63 /* SelectScreenViewController.swift */,
 				0AC244352B8681B400F33D92 /* SplashScreenViewController.swift */,
+				0AC244732B9BA4EB00F33D92 /* GameScreenViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -265,6 +285,7 @@
 			children = (
 				341E42222AC9BEB800681B63 /* SelectView.swift */,
 				0AC244372B8681F000F33D92 /* SplashView.swift */,
+				0AC244752B9BA54000F33D92 /* GameView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -424,16 +445,23 @@
 				0AC2445A2B8B574A00F33D92 /* AppNavigator.swift in Sources */,
 				0AC244472B8A5BD900F33D92 /* Navigator.swift in Sources */,
 				341E41EC2AC99C5E00681B63 /* SceneDelegate.swift in Sources */,
+				0AC244742B9BA4EB00F33D92 /* GameScreenViewController.swift in Sources */,
+				0AC244782B9BA5AB00F33D92 /* GameViewModel.swift in Sources */,
 				0AC2446A2B96492F00F33D92 /* SplashViewModel.swift in Sources */,
 				0AC244622B8FCA2600F33D92 /* SelectCoordinatorFactory.swift in Sources */,
+				0AC2446E2B9BA3B100F33D92 /* GameScreenViewControllerFactory.swift in Sources */,
 				0AC244602B8B5ADA00F33D92 /* BasicNavigationController.swift in Sources */,
 				0AC244662B8FCBF600F33D92 /* SelectScreenViewControllerFactory.swift in Sources */,
 				0AC244642B8FCAE000F33D92 /* SelectCoordinator.swift in Sources */,
+				0AC244762B9BA54000F33D92 /* GameView.swift in Sources */,
 				0AC244362B8681B400F33D92 /* SplashScreenViewController.swift in Sources */,
+				0AC2446C2B9BA35E00F33D92 /* GameCoordinatorFactory.swift in Sources */,
 				0AC244682B8FCCC100F33D92 /* SelectNavigationDelegate.swift in Sources */,
 				0AC244432B8A0F3100F33D92 /* Coordinator.swift in Sources */,
 				0AC2444C2B8A635300F33D92 /* Dismissable.swift in Sources */,
+				0AC244722B9BA4A300F33D92 /* GameNavigationDelegate.swift in Sources */,
 				0AC244502B8B4A3700F33D92 /* SplashScreenViewControllerFactory.swift in Sources */,
+				0AC244702B9BA40D00F33D92 /* GameCoordinator.swift in Sources */,
 				0AC2443B2B8A0A3C00F33D92 /* DependencyContainer.swift in Sources */,
 				0AC2445E2B8B5A2100F33D92 /* BasicNavigator.swift in Sources */,
 				0AC244342B7EA60000F33D92 /* SelectViewModel.swift in Sources */,

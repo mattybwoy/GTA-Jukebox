@@ -7,10 +7,10 @@
 
 public struct SplashViewModel {
     
-    let navigationDelegate: SplashNavigationDelegate
+    let splashNavigationDelegate: SplashNavigationDelegate
     
     func toGameSelection() {
-        navigationDelegate.toGameSelection()
+        splashNavigationDelegate.toGameSelection()
     }
     
 }

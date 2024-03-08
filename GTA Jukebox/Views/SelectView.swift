@@ -123,7 +123,7 @@ final class SelectView: UIView {
     public lazy var gameSelectionImage: UIImageView = {
         let gameImage = UIImageView()
         gameImage.image = UIImage(named: gameSelection.rawValue)
-        gameImage.contentMode = .scaleAspectFill
+        gameImage.contentMode = .scaleToFill
         return gameImage
     }()
     
