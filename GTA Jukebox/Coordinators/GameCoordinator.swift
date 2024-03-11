@@ -16,14 +16,16 @@ final class GameCoordinator: Coordinator {
     let factory: Factory
     weak var baseViewController: ViewController?
     unowned var parentCoordinator: Coordinator?
+    let gameSelected: GameSelection
     
-    init(navigator: Navigator, factory: Factory) {
+    init(navigator: Navigator, gameSelected: GameSelection, factory: Factory) {
         self.navigator = navigator
+        self.gameSelected = gameSelected
         self.factory = factory
     }
     
     func start(transition: Transition, onDismissed: (() -> Void)?) {
-        let viewController: ViewController = factory.makeGameScreenViewController(navigationDelegate: self, onDismissed: onDismissed)
+        let viewController: ViewController = factory.makeGameScreenViewController(navigationDelegate: self, gameSelected: gameSelected, onDismissed: onDismissed)
         navigator.navigate(to: viewController, transition: transition)
     }
     
@@ -32,7 +34,7 @@ final class GameCoordinator: Coordinator {
 extension GameCoordinator: GameNavigationDelegate {
     
     func dismiss() {
-        //TODO
+        navigator.popViewController(animated: true)
     }
     
 }

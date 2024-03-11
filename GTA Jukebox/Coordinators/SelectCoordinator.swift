@@ -33,7 +33,7 @@ final class SelectCoordinator: Coordinator {
 extension SelectCoordinator: SelectNavigationDelegate {
     
     func selectButtonTapped(game: GameSelection) {
-        let coordinator = factory.makeGameCoordinator(navigator: navigator)
+        let coordinator = factory.makeGameCoordinator(navigator: navigator, game: game)
         startChild(coordinator, transition: .push(animated: true), onDismissed: nil)
     }
 

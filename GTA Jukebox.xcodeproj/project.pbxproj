@@ -283,8 +283,8 @@
 		341E42242AC9BEBC00681B63 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				341E42222AC9BEB800681B63 /* SelectView.swift */,
 				0AC244372B8681F000F33D92 /* SplashView.swift */,
+				341E42222AC9BEB800681B63 /* SelectView.swift */,
 				0AC244752B9BA54000F33D92 /* GameView.swift */,
 			);
 			path = Views;

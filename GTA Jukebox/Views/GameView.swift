@@ -14,8 +14,10 @@ protocol GameScreenDelegate: AnyObject {
 final class GameView: UIView {
     
     weak var gameDelegate: GameScreenDelegate?
+    let gameSelected: GameSelection
     
-    public init() {
+    public init(game: GameSelection) {
+        self.gameSelected = game
         super.init(frame: .zero)
         backgroundColor = .black
     }
@@ -27,23 +29,46 @@ final class GameView: UIView {
     override func layoutSubviews() {
         super.layoutSubviews()
         
-        addSubview(studioImage)
-        studioImage.translatesAutoresizingMaskIntoConstraints = false
+        addSubview(gameLogoImage)
+        gameLogoImage.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
-            studioImage.centerXAnchor.constraint(equalTo: centerXAnchor),
-            studioImage.centerYAnchor.constraint(equalTo: centerYAnchor),
-            studioImage.heightAnchor.constraint(equalToConstant: 150),
-            studioImage.widthAnchor.constraint(equalToConstant: 150)
+            gameLogoImage.centerXAnchor.constraint(equalTo: centerXAnchor),
+            gameLogoImage.centerYAnchor.constraint(equalTo: centerYAnchor, constant: -210),
+            gameLogoImage.heightAnchor.constraint(equalToConstant: 270),
+            gameLogoImage.widthAnchor.constraint(equalToConstant: 350)
+        ])
+        
+        addSubview(backButton)
+        backButton.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+            backButton.centerXAnchor.constraint(equalTo: centerXAnchor, constant: -120),
+            backButton.centerYAnchor.constraint(equalTo: centerYAnchor, constant: -340),
+            backButton.heightAnchor.constraint(equalToConstant: 50),
+            backButton.widthAnchor.constraint(equalToConstant: 90)
         ])
     }
     
-    private let studioImage: UIImageView = {
-        let studioImage = UIImageView()
-        studioImage.image = UIImage(named: "Rockstar")
-        UIImageView.animate(withDuration: 1.5, delay: 0.2, options: [.beginFromCurrentState, .transitionCrossDissolve]) {
-            studioImage.transform = CGAffineTransform(scaleX: 1.2, y: 1.2)
-        }
-        return studioImage
+    private lazy var gameLogoImage: UIImageView = {
+        let gameImage = UIImageView()
+        gameImage.image = UIImage(named: gameSelected.rawValue)
+        gameImage.contentMode = .scaleToFill
+        return gameImage
     }()
+    
+    private let backButton: UIButton = {
+        let backButton = UIButton()
+         backButton.setTitle("Back", for: .normal)
+         backButton.titleLabel?.font = UIFont(name: "PricedownBl-Regular", size: 25)
+         backButton.setTitleColor(.black, for: .normal)
+         backButton.backgroundColor = .darkGray
+         backButton.layer.cornerRadius = 8
+         backButton.layer.borderWidth = 3
+         backButton.addTarget(self, action: #selector(backButtonTapped), for: .touchUpInside)
+         return backButton
+    }()
+    
+    @objc func backButtonTapped() {
+        gameDelegate?.dismissScreen()
+    }
     
 }

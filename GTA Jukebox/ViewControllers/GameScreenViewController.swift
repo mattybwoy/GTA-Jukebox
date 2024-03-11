@@ -22,7 +22,7 @@ final class GameScreenViewController: GenericViewController <GameView> {
     }
     
     override func loadView() {
-        self.view = GameView()
+        self.view = GameView(game: viewModel.game)
     }
     
 }
@@ -30,7 +30,7 @@ final class GameScreenViewController: GenericViewController <GameView> {
 extension GameScreenViewController: GameScreenDelegate {
     
     func dismissScreen() {
-        //TODO
+        viewModel.dismiss()
     }
     
 }

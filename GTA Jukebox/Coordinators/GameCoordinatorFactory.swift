@@ -8,11 +8,11 @@
 import Foundation
 
 protocol GameCoordinatorFactory {
-    func makeGameCoordinator(navigator: Navigator) -> Coordinator
+    func makeGameCoordinator(navigator: Navigator, game: GameSelection) -> Coordinator
 }
 
 extension DependencyContainer: GameCoordinatorFactory {
-    func makeGameCoordinator(navigator: Navigator) -> Coordinator {
-        GameCoordinator(navigator: navigator, factory: self)
+    func makeGameCoordinator(navigator: Navigator, game: GameSelection = .gta3) -> Coordinator {
+        GameCoordinator(navigator: navigator, gameSelected: game, factory: self)
     }
 }
