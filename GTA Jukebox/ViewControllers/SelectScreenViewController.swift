@@ -32,7 +32,7 @@ extension SelectScreenViewController: GameSelectionDelegate {
     
     func didUpdateGame(newGame: String) {
         rootView.gameSelection = viewModel.currentGameState
-        rootView.gameSelectionImage.image = UIImage(named: newGame)
+        rootView.gameSelectionImage.image = UIImage(named: newGame + "Logo")
     }
     
 }

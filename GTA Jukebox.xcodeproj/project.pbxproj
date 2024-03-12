@@ -273,8 +273,8 @@
 				0AC244552B8B4EBE00F33D92 /* BasicViewController.swift */,
 				0AC244482B8A603900F33D92 /* ViewController.swift */,
 				341E42202AC9BE0100681B63 /* GenericViewController.swift */,
-				341E41ED2AC99C5E00681B63 /* SelectScreenViewController.swift */,
 				0AC244352B8681B400F33D92 /* SplashScreenViewController.swift */,
+				341E41ED2AC99C5E00681B63 /* SelectScreenViewController.swift */,
 				0AC244732B9BA4EB00F33D92 /* GameScreenViewController.swift */,
 			);
 			path = ViewControllers;

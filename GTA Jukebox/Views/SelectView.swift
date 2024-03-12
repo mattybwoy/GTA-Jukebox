@@ -122,8 +122,8 @@ final class SelectView: UIView {
     
     public lazy var gameSelectionImage: UIImageView = {
         let gameImage = UIImageView()
-        gameImage.image = UIImage(named: gameSelection.rawValue)
-        gameImage.contentMode = .scaleToFill
+        gameImage.image = UIImage(named: gameSelection.rawValue + "Logo")
+        gameImage.contentMode = .scaleAspectFit
         return gameImage
     }()
     

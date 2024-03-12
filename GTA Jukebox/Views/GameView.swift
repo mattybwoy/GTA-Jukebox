@@ -33,15 +33,24 @@ final class GameView: UIView {
         gameLogoImage.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
             gameLogoImage.centerXAnchor.constraint(equalTo: centerXAnchor),
-            gameLogoImage.centerYAnchor.constraint(equalTo: centerYAnchor, constant: -210),
-            gameLogoImage.heightAnchor.constraint(equalToConstant: 270),
-            gameLogoImage.widthAnchor.constraint(equalToConstant: 350)
+            gameLogoImage.centerYAnchor.constraint(equalTo: centerYAnchor),
+            gameLogoImage.heightAnchor.constraint(equalToConstant: 150),
+            gameLogoImage.widthAnchor.constraint(equalToConstant: 200)
+        ])
+        
+        addSubview(gameBackground)
+        gameBackground.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+            gameBackground.centerXAnchor.constraint(equalTo: centerXAnchor),
+            gameBackground.centerYAnchor.constraint(equalTo: centerYAnchor, constant: -210),
+            gameBackground.heightAnchor.constraint(equalToConstant: 320),
+            gameBackground.widthAnchor.constraint(equalToConstant: bounds.width)
         ])
         
         addSubview(backButton)
         backButton.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
-            backButton.centerXAnchor.constraint(equalTo: centerXAnchor, constant: -120),
+            backButton.centerXAnchor.constraint(equalTo: centerXAnchor, constant: -130),
             backButton.centerYAnchor.constraint(equalTo: centerYAnchor, constant: -340),
             backButton.heightAnchor.constraint(equalToConstant: 50),
             backButton.widthAnchor.constraint(equalToConstant: 90)
@@ -50,9 +59,16 @@ final class GameView: UIView {
     
     private lazy var gameLogoImage: UIImageView = {
         let gameImage = UIImageView()
-        gameImage.image = UIImage(named: gameSelected.rawValue)
-        gameImage.contentMode = .scaleToFill
+        gameImage.image = UIImage(named: gameSelected.rawValue + "Logo")
+        gameImage.contentMode = .scaleAspectFit
         return gameImage
+    }()
+    
+    private lazy var gameBackground: UIImageView = {
+        let gameBackgroundImage = UIImageView()
+        gameBackgroundImage.image = UIImage(named: gameSelected.rawValue + "Loading")
+        gameBackgroundImage.contentMode = .scaleAspectFit
+        return gameBackgroundImage
     }()
     
     private let backButton: UIButton = {

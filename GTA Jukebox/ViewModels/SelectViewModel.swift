@@ -13,9 +13,9 @@ protocol GameSelectionDelegate: AnyObject {
 }
 
 enum GameSelection: String {
-    case gta3 = "GTA3Logo"
-    case viceCity = "ViceCityLogo"
-    case sanAndreas = "SanAndreasLogo"
+    case gta3 = "GTA3"
+    case viceCity = "ViceCity"
+    case sanAndreas = "SanAndreas"
 }
 
 final class SelectViewModel {
@@ -39,13 +39,13 @@ final class SelectViewModel {
     
     func previousGame(gameImage: String) {
         switch gameImage {
-        case "SanAndreasLogo":
+        case "SanAndreas":
             currentGameState = .viceCity
             gameSelectionDelegate?.didUpdateGame(newGame: GameSelection.viceCity.rawValue)
-        case "ViceCityLogo":
+        case "ViceCity":
             currentGameState = .gta3
             gameSelectionDelegate?.didUpdateGame(newGame: GameSelection.gta3.rawValue)
-        case "GTA3Logo":
+        case "GTA3":
             currentGameState = .sanAndreas
             gameSelectionDelegate?.didUpdateGame(newGame: GameSelection.sanAndreas.rawValue)
         default:
@@ -55,13 +55,13 @@ final class SelectViewModel {
     
     func nextGame(gameImage: String) {
         switch gameImage {
-        case "ViceCityLogo":
+        case "ViceCity":
             currentGameState = .sanAndreas
             gameSelectionDelegate?.didUpdateGame(newGame: GameSelection.sanAndreas.rawValue)
-        case "SanAndreasLogo":
+        case "SanAndreas":
             currentGameState = .gta3
             gameSelectionDelegate?.didUpdateGame(newGame: GameSelection.gta3.rawValue)
-        case "GTA3Logo":
+        case "GTA3":
             currentGameState = .viceCity
             gameSelectionDelegate?.didUpdateGame(newGame: GameSelection.viceCity.rawValue)
         default:
