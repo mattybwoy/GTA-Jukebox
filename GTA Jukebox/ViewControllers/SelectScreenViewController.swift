@@ -9,11 +9,11 @@ import UIKit
 
 final class SelectScreenViewController: GenericViewController <SelectView> {
     
-    private var viewModel: SelectViewModel!
+    private var viewModel: SelectViewModel
     
     init(viewModel: SelectViewModel) {
-        super.init()
         self.viewModel = viewModel
+        super.init()
         viewModel.gameSelectionDelegate = self
     }
     

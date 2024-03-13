@@ -39,6 +39,10 @@
 		0AC244742B9BA4EB00F33D92 /* GameScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AC244732B9BA4EB00F33D92 /* GameScreenViewController.swift */; };
 		0AC244762B9BA54000F33D92 /* GameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AC244752B9BA54000F33D92 /* GameView.swift */; };
 		0AC244782B9BA5AB00F33D92 /* GameViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AC244772B9BA5AB00F33D92 /* GameViewModel.swift */; };
+		0AC2447B2BA0C53400F33D92 /* AudioProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AC2447A2BA0C53400F33D92 /* AudioProtocol.swift */; };
+		0AC2447D2BA19F3E00F33D92 /* RadioPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AC2447C2BA19F3E00F33D92 /* RadioPlayer.swift */; };
+		0AC2447F2BA222B000F33D92 /* MusicOrganiser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AC2447E2BA222B000F33D92 /* MusicOrganiser.swift */; };
+		0AC244812BA22F7500F33D92 /* StationLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AC244802BA22F7500F33D92 /* StationLoader.swift */; };
 		341E41EA2AC99C5E00681B63 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 341E41E92AC99C5E00681B63 /* AppDelegate.swift */; };
 		341E41EC2AC99C5E00681B63 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 341E41EB2AC99C5E00681B63 /* SceneDelegate.swift */; };
 		341E41EE2AC99C5E00681B63 /* SelectScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 341E41ED2AC99C5E00681B63 /* SelectScreenViewController.swift */; };
@@ -103,6 +107,10 @@
 		0AC244732B9BA4EB00F33D92 /* GameScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScreenViewController.swift; sourceTree = "<group>"; };
 		0AC244752B9BA54000F33D92 /* GameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameView.swift; sourceTree = "<group>"; };
 		0AC244772B9BA5AB00F33D92 /* GameViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewModel.swift; sourceTree = "<group>"; };
+		0AC2447A2BA0C53400F33D92 /* AudioProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioProtocol.swift; sourceTree = "<group>"; };
+		0AC2447C2BA19F3E00F33D92 /* RadioPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadioPlayer.swift; sourceTree = "<group>"; };
+		0AC2447E2BA222B000F33D92 /* MusicOrganiser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicOrganiser.swift; sourceTree = "<group>"; };
+		0AC244802BA22F7500F33D92 /* StationLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationLoader.swift; sourceTree = "<group>"; };
 		341E41E62AC99C5E00681B63 /* GTA Jukebox.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "GTA Jukebox.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		341E41E92AC99C5E00681B63 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		341E41EB2AC99C5E00681B63 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -198,6 +206,17 @@
 			path = Protocols;
 			sourceTree = "<group>";
 		};
+		0AC244792BA0C32000F33D92 /* AudioService */ = {
+			isa = PBXGroup;
+			children = (
+				0AC2447A2BA0C53400F33D92 /* AudioProtocol.swift */,
+				0AC2447C2BA19F3E00F33D92 /* RadioPlayer.swift */,
+				0AC2447E2BA222B000F33D92 /* MusicOrganiser.swift */,
+				0AC244802BA22F7500F33D92 /* StationLoader.swift */,
+			);
+			path = AudioService;
+			sourceTree = "<group>";
+		};
 		341E41DD2AC99C5E00681B63 = {
 			isa = PBXGroup;
 			children = (
@@ -227,6 +246,7 @@
 				341E41EB2AC99C5E00681B63 /* SceneDelegate.swift */,
 				0AC244572B8B534000F33D92 /* Window.swift */,
 				0AC2443A2B8A0A3C00F33D92 /* DependencyContainer.swift */,
+				0AC244792BA0C32000F33D92 /* AudioService */,
 				0AC2443C2B8A0D8900F33D92 /* Coordinators */,
 				0AC2444A2B8A632D00F33D92 /* Protocols */,
 				0AC2443F2B8A0DE500F33D92 /* Navigation */,
@@ -430,6 +450,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0AC2447D2BA19F3E00F33D92 /* RadioPlayer.swift in Sources */,
 				0AC244492B8A603900F33D92 /* ViewController.swift in Sources */,
 				0AC244562B8B4EBE00F33D92 /* BasicViewController.swift in Sources */,
 				341E41EE2AC99C5E00681B63 /* SelectScreenViewController.swift in Sources */,
@@ -439,6 +460,8 @@
 				0AC2445C2B8B579300F33D92 /* AppCoordinator.swift in Sources */,
 				0AC2444E2B8B427700F33D92 /* NavigationController.swift in Sources */,
 				341E42232AC9BEB800681B63 /* SelectView.swift in Sources */,
+				0AC2447F2BA222B000F33D92 /* MusicOrganiser.swift in Sources */,
+				0AC244812BA22F7500F33D92 /* StationLoader.swift in Sources */,
 				0AC244412B8A0ED300F33D92 /* SplashCoordinator.swift in Sources */,
 				0AC244542B8B4BCD00F33D92 /* SplashNavigationDelegate.swift in Sources */,
 				0AC244452B8A104200F33D92 /* Transition.swift in Sources */,
@@ -460,6 +483,7 @@
 				0AC244432B8A0F3100F33D92 /* Coordinator.swift in Sources */,
 				0AC2444C2B8A635300F33D92 /* Dismissable.swift in Sources */,
 				0AC244722B9BA4A300F33D92 /* GameNavigationDelegate.swift in Sources */,
+				0AC2447B2BA0C53400F33D92 /* AudioProtocol.swift in Sources */,
 				0AC244502B8B4A3700F33D92 /* SplashScreenViewControllerFactory.swift in Sources */,
 				0AC244702B9BA40D00F33D92 /* GameCoordinator.swift in Sources */,
 				0AC2443B2B8A0A3C00F33D92 /* DependencyContainer.swift in Sources */,
