@@ -38,6 +38,15 @@ final class GameView: UIView {
             gameLogoImage.widthAnchor.constraint(equalToConstant: 200)
         ])
         
+        addSubview(radioStationImage)
+        radioStationImage.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+            radioStationImage.centerXAnchor.constraint(equalTo: centerXAnchor),
+            radioStationImage.centerYAnchor.constraint(equalTo: centerYAnchor, constant: 150),
+            radioStationImage.heightAnchor.constraint(equalToConstant: 100),
+            radioStationImage.widthAnchor.constraint(equalToConstant: 150)
+        ])
+        
         addSubview(gameBackground)
         gameBackground.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
@@ -62,6 +71,13 @@ final class GameView: UIView {
         gameImage.image = UIImage(named: gameSelected.rawValue + "Logo")
         gameImage.contentMode = .scaleAspectFit
         return gameImage
+    }()
+    
+    private lazy var radioStationImage: UIImageView = {
+        let radioStationImage = UIImageView()
+        radioStationImage.image = UIImage(named: "ChatterboxFM")
+        radioStationImage.contentMode = .scaleAspectFit
+        return radioStationImage
     }()
     
     private lazy var gameBackground: UIImageView = {

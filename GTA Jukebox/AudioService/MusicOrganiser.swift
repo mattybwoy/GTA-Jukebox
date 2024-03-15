@@ -15,7 +15,7 @@ final class MusicOrganiser {
         self.game = game
     }
     
-    func radioStationsBuilder() -> [String] {
+    func radioStationsLoader() -> [String] {
         switch game {
         case .gta3:
             return StationLoader().gta3Stations
