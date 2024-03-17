@@ -18,11 +18,11 @@ final class MusicOrganiser {
     func radioStationsLoader() -> [String] {
         switch game {
         case .gta3:
-            return StationLoader().gta3Stations
+            return StationLoader.gta3Stations
         case .viceCity:
-            return StationLoader().viceCityStations
+            return StationLoader.viceCityStations
         case .sanAndreas:
-            return StationLoader().sanAndreasStations
+            return StationLoader.sanAndreasStations
         }
     }
     

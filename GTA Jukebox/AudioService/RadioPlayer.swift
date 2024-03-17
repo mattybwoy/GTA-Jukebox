@@ -25,6 +25,7 @@ final class RadioPlayer: AudioProtocol {
         do {
             audioPlayer = try AVAudioPlayer(contentsOf: URL(string: station)!)
             audioPlayer.play()
+            audioPlayer.numberOfLoops = -1
         } catch {
             print(LocalizedError.self)
         }

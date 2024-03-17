@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import UIKit
 
 final class GameScreenViewController: GenericViewController <GameView> {
     
@@ -15,6 +16,8 @@ final class GameScreenViewController: GenericViewController <GameView> {
         self.viewModel = viewModel
         super.init()
         rootView.gameDelegate = self
+        rootView.radioPicker.dataSource = self
+        rootView.radioPicker.delegate = self
     }
     
     override func viewDidLoad() {
@@ -33,4 +36,23 @@ extension GameScreenViewController: GameScreenDelegate {
         viewModel.dismiss()
     }
     
+}
+
+extension GameScreenViewController: UIPickerViewDataSource, UIPickerViewDelegate {
+    
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        return 1
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        return StationLoader.gta3Stations.count
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        return StationLoader.gta3Stations[row]
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, rowHeightForComponent component: Int) -> CGFloat {
+      return 100
+    }
 }

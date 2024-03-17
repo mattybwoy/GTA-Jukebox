@@ -38,15 +38,6 @@ final class GameView: UIView {
             gameLogoImage.widthAnchor.constraint(equalToConstant: 200)
         ])
         
-        addSubview(radioStationImage)
-        radioStationImage.translatesAutoresizingMaskIntoConstraints = false
-        NSLayoutConstraint.activate([
-            radioStationImage.centerXAnchor.constraint(equalTo: centerXAnchor),
-            radioStationImage.centerYAnchor.constraint(equalTo: centerYAnchor, constant: 150),
-            radioStationImage.heightAnchor.constraint(equalToConstant: 100),
-            radioStationImage.widthAnchor.constraint(equalToConstant: 150)
-        ])
-        
         addSubview(gameBackground)
         gameBackground.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
@@ -54,6 +45,15 @@ final class GameView: UIView {
             gameBackground.centerYAnchor.constraint(equalTo: centerYAnchor, constant: -210),
             gameBackground.heightAnchor.constraint(equalToConstant: 320),
             gameBackground.widthAnchor.constraint(equalToConstant: bounds.width)
+        ])
+        
+        addSubview(radioPicker)
+        radioPicker.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+            radioPicker.centerXAnchor.constraint(equalTo: centerXAnchor),
+            radioPicker.centerYAnchor.constraint(equalTo: centerYAnchor, constant: 140),
+            radioPicker.heightAnchor.constraint(equalToConstant: bounds.width),
+            radioPicker.widthAnchor.constraint(equalToConstant: 100)
         ])
         
         addSubview(backButton)
@@ -71,13 +71,6 @@ final class GameView: UIView {
         gameImage.image = UIImage(named: gameSelected.rawValue + "Logo")
         gameImage.contentMode = .scaleAspectFit
         return gameImage
-    }()
-    
-    private lazy var radioStationImage: UIImageView = {
-        let radioStationImage = UIImageView()
-        radioStationImage.image = UIImage(named: "ChatterboxFM")
-        radioStationImage.contentMode = .scaleAspectFit
-        return radioStationImage
     }()
     
     private lazy var gameBackground: UIImageView = {
@@ -99,8 +92,19 @@ final class GameView: UIView {
          return backButton
     }()
     
+    var radioPicker: UIPickerView = {
+        let radioPicker = UIPickerView()
+        radioPicker.transform = CGAffineTransform(rotationAngle: rotationAngle)
+        radioPicker.backgroundColor = .darkGray
+        return radioPicker
+    }()
+    
     @objc func backButtonTapped() {
         gameDelegate?.dismissScreen()
     }
     
+}
+
+extension GameView {
+    static private var rotationAngle: CGFloat! = -90  * (.pi/180)
 }
