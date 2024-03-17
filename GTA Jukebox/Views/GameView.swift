@@ -106,5 +106,5 @@ final class GameView: UIView {
 }
 
 extension GameView {
-    static private var rotationAngle: CGFloat! = -90  * (.pi/180)
+    static private var rotationAngle: CGFloat! = -90 * (.pi/180)
 }
