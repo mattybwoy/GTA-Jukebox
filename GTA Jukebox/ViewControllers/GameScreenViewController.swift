@@ -45,7 +45,14 @@ extension GameScreenViewController: UIPickerViewDataSource, UIPickerViewDelegate
     }
     
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        return StationLoader.gta3Stations.count
+        switch viewModel.game {
+        case .gta3:
+            return StationLoader.gta3Stations.count
+        case .viceCity:
+            return StationLoader.viceCityStations.count
+        case .sanAndreas:
+            return StationLoader.sanAndreasStations.count
+        }
     }
     
     func pickerView(_ pickerView: UIPickerView, rowHeightForComponent component: Int) -> CGFloat {
@@ -56,8 +63,11 @@ extension GameScreenViewController: UIPickerViewDataSource, UIPickerViewDelegate
 
         let myView = UIView(frame: CGRectMake(0, 0, pickerView.bounds.width, 20))
         let myImageView = UIImageView(frame: CGRectMake(0, myView.center.y - 50, 100, 100))
-        for _ in StationLoader.gta3Stations {
-            myImageView.image = UIImage(named: StationLoader.gta3Stations[row])
+        let musicDJ = MusicOrganiser(game: viewModel.game)
+        let radioStations = musicDJ.radioStationsLoader()
+        let channels = musicDJ.radioStationsLoader()
+        for _ in channels {
+            myImageView.image = UIImage(named: channels[row])
         }
         myImageView.contentMode = .scaleAspectFit
         myImageView.transform = CGAffineTransform(rotationAngle: GameScreenViewController.rotationAngle)
