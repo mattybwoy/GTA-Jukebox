@@ -21,11 +21,7 @@ final class SelectView: UIView {
     public init() {
         super.init(frame: .zero)
         backgroundColor = .black
-        DispatchQueue.main.async {
-            UIImageView.animate(withDuration: 0.8, delay: 0.5, options: [.repeat, .autoreverse]) {
-                self.antennaImage.transform = CGAffineTransform(scaleX: 1.2, y: 1.2)
-            }
-        }
+
     }
     
     required init?(coder: NSCoder) {
@@ -114,7 +110,7 @@ final class SelectView: UIView {
         return title
     }()
     
-    private let antennaImage: UIImageView = {
+    public let antennaImage: UIImageView = {
         let antennaImage = UIImageView()
         antennaImage.image = UIImage(named: "antenna")
         return antennaImage

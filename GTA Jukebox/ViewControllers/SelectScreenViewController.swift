@@ -22,8 +22,24 @@ final class SelectScreenViewController: GenericViewController <SelectView> {
         rootView.selectDelegate = self
     }
     
+    override func viewDidDisappear(_ animated: Bool) {
+        rootView.antennaImage.transform = .identity
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        animateAntenna()
+    }
+    
     override func loadView() {
         self.view = SelectView()
+    }
+    
+    func animateAntenna() {
+        DispatchQueue.main.async {
+            UIImageView.animate(withDuration: 0.8, delay: 0.5, options: [.repeat, .autoreverse]) {
+                self.rootView.antennaImage.transform = CGAffineTransform(scaleX: 1.2, y: 1.2)
+            }
+        }
     }
     
 }
