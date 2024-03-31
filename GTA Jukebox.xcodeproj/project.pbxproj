@@ -41,7 +41,7 @@
 		0AC244782B9BA5AB00F33D92 /* GameViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AC244772B9BA5AB00F33D92 /* GameViewModel.swift */; };
 		0AC2447B2BA0C53400F33D92 /* AudioProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AC2447A2BA0C53400F33D92 /* AudioProtocol.swift */; };
 		0AC2447D2BA19F3E00F33D92 /* RadioPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AC2447C2BA19F3E00F33D92 /* RadioPlayer.swift */; };
-		0AC2447F2BA222B000F33D92 /* MusicOrganiser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AC2447E2BA222B000F33D92 /* MusicOrganiser.swift */; };
+		0AC2447F2BA222B000F33D92 /* MusicMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AC2447E2BA222B000F33D92 /* MusicMapper.swift */; };
 		0AC244812BA22F7500F33D92 /* StationLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AC244802BA22F7500F33D92 /* StationLoader.swift */; };
 		341E41EA2AC99C5E00681B63 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 341E41E92AC99C5E00681B63 /* AppDelegate.swift */; };
 		341E41EC2AC99C5E00681B63 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 341E41EB2AC99C5E00681B63 /* SceneDelegate.swift */; };
@@ -109,7 +109,7 @@
 		0AC244772B9BA5AB00F33D92 /* GameViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewModel.swift; sourceTree = "<group>"; };
 		0AC2447A2BA0C53400F33D92 /* AudioProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioProtocol.swift; sourceTree = "<group>"; };
 		0AC2447C2BA19F3E00F33D92 /* RadioPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadioPlayer.swift; sourceTree = "<group>"; };
-		0AC2447E2BA222B000F33D92 /* MusicOrganiser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicOrganiser.swift; sourceTree = "<group>"; };
+		0AC2447E2BA222B000F33D92 /* MusicMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicMapper.swift; sourceTree = "<group>"; };
 		0AC244802BA22F7500F33D92 /* StationLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationLoader.swift; sourceTree = "<group>"; };
 		341E41E62AC99C5E00681B63 /* GTA Jukebox.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "GTA Jukebox.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		341E41E92AC99C5E00681B63 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -211,7 +211,7 @@
 			children = (
 				0AC2447A2BA0C53400F33D92 /* AudioProtocol.swift */,
 				0AC2447C2BA19F3E00F33D92 /* RadioPlayer.swift */,
-				0AC2447E2BA222B000F33D92 /* MusicOrganiser.swift */,
+				0AC2447E2BA222B000F33D92 /* MusicMapper.swift */,
 				0AC244802BA22F7500F33D92 /* StationLoader.swift */,
 			);
 			path = AudioService;
@@ -460,7 +460,7 @@
 				0AC2445C2B8B579300F33D92 /* AppCoordinator.swift in Sources */,
 				0AC2444E2B8B427700F33D92 /* NavigationController.swift in Sources */,
 				341E42232AC9BEB800681B63 /* SelectView.swift in Sources */,
-				0AC2447F2BA222B000F33D92 /* MusicOrganiser.swift in Sources */,
+				0AC2447F2BA222B000F33D92 /* MusicMapper.swift in Sources */,
 				0AC244812BA22F7500F33D92 /* StationLoader.swift in Sources */,
 				0AC244412B8A0ED300F33D92 /* SplashCoordinator.swift in Sources */,
 				0AC244542B8B4BCD00F33D92 /* SplashNavigationDelegate.swift in Sources */,

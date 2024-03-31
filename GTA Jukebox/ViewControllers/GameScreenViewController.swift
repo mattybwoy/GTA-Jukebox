@@ -11,9 +11,11 @@ import UIKit
 final class GameScreenViewController: GenericViewController <GameView> {
     
     private let viewModel: GameViewModel
+    private let mapper: MusicMapper
     
-    init(viewModel: GameViewModel) {
+    init(viewModel: GameViewModel, mapper: MusicMapper) {
         self.viewModel = viewModel
+        self.mapper = mapper
         super.init()
         rootView.gameDelegate = self
         rootView.radioPicker.dataSource = self
@@ -45,14 +47,7 @@ extension GameScreenViewController: UIPickerViewDataSource, UIPickerViewDelegate
     }
     
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        switch viewModel.game {
-        case .gta3:
-            return StationLoader.gta3Stations.count
-        case .viceCity:
-            return StationLoader.viceCityStations.count
-        case .sanAndreas:
-            return StationLoader.sanAndreasStations.count
-        }
+        return mapper.radioChannelLoader.count
     }
     
     func pickerView(_ pickerView: UIPickerView, rowHeightForComponent component: Int) -> CGFloat {
@@ -63,11 +58,9 @@ extension GameScreenViewController: UIPickerViewDataSource, UIPickerViewDelegate
 
         let myView = UIView(frame: CGRectMake(0, 0, pickerView.bounds.width, 20))
         let myImageView = UIImageView(frame: CGRectMake(0, myView.center.y - 50, 100, 100))
-        let musicDJ = MusicOrganiser(game: viewModel.game)
-        let radioStations = musicDJ.radioStationsLoader()
-        let channels = musicDJ.radioStationsLoader()
-        for _ in channels {
-            myImageView.image = UIImage(named: channels[row])
+        let radioStationsList = mapper.radioChannelLoader
+        for _ in radioStationsList {
+            myImageView.image = UIImage(named: radioStationsList[row])
         }
         myImageView.contentMode = .scaleAspectFit
         myImageView.transform = CGAffineTransform(rotationAngle: GameScreenViewController.rotationAngle)
