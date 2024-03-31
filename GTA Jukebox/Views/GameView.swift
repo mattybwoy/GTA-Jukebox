@@ -55,6 +55,32 @@ final class GameView: UIView {
             radioPicker.heightAnchor.constraint(equalToConstant: bounds.width),
             radioPicker.widthAnchor.constraint(equalToConstant: 100)
         ])
+        addSubview(volumeLabel)
+        volumeLabel.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+            volumeLabel.centerXAnchor.constraint(equalTo: centerXAnchor),
+            volumeLabel.centerYAnchor.constraint(equalTo: centerYAnchor, constant: 320),
+            volumeLabel.heightAnchor.constraint(equalToConstant: 70),
+            volumeLabel.widthAnchor.constraint(equalToConstant: 100)
+        ])
+        
+        addSubview(decreaseVolume)
+        decreaseVolume.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+            decreaseVolume.centerXAnchor.constraint(equalTo: centerXAnchor, constant: -120),
+            decreaseVolume.centerYAnchor.constraint(equalTo: centerYAnchor, constant: 250),
+            decreaseVolume.heightAnchor.constraint(equalToConstant: 60),
+            decreaseVolume.widthAnchor.constraint(equalToConstant: 60)
+        ])
+        
+        addSubview(increaseVolume)
+        increaseVolume.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+            increaseVolume.centerXAnchor.constraint(equalTo: centerXAnchor, constant: 120),
+            increaseVolume.centerYAnchor.constraint(equalTo: centerYAnchor, constant: 250),
+            increaseVolume.heightAnchor.constraint(equalToConstant: 60),
+            increaseVolume.widthAnchor.constraint(equalToConstant: 60)
+        ])
         
         addSubview(backButton)
         backButton.translatesAutoresizingMaskIntoConstraints = false
@@ -97,6 +123,39 @@ final class GameView: UIView {
         radioPicker.transform = CGAffineTransform(rotationAngle: rotationAngle)
         radioPicker.backgroundColor = .darkGray
         return radioPicker
+    }()
+    
+    private let volumeLabel: UILabel = {
+       let volumeLabel = UILabel()
+        volumeLabel.textColor = .white
+        volumeLabel.font = UIFont(name: "PricedownBl-Regular", size: 30)
+        volumeLabel.text = "Volume"
+        return volumeLabel
+    }()
+    
+    private var decreaseVolume: UIButton = {
+        let decrease = UIButton(frame: CGRect(x: 0, y: 0, width: 50, height: 50))
+        var decreaseConfig = UIButton.Configuration.plain()
+        decreaseConfig.image = UIImage(systemName: "play.circle", withConfiguration: UIImage.SymbolConfiguration(scale: .large))?.applyingSymbolConfiguration(.init(pointSize: 35))
+        decreaseConfig.contentInsets = .zero
+        decrease.configuration = decreaseConfig
+        decrease.contentVerticalAlignment = .fill
+        decrease.contentHorizontalAlignment = .fill
+        decrease.transform = CGAffineTransform(scaleX: -1.0, y: 1.0)
+        decrease.tintColor = .white
+        return decrease
+    }()
+    
+    private var increaseVolume: UIButton = {
+        let increase = UIButton(frame: CGRect(x: 0, y: 0, width: 50, height: 50))
+        var increaseConfig = UIButton.Configuration.plain()
+        increaseConfig.image = UIImage(systemName: "play.circle", withConfiguration: UIImage.SymbolConfiguration(scale: .large))?.applyingSymbolConfiguration(.init(pointSize: 35))
+        increaseConfig.contentInsets = .zero
+        increase.configuration = increaseConfig
+        increase.contentVerticalAlignment = .fill
+        increase.contentHorizontalAlignment = .fill
+        increase.tintColor = .white
+        return increase
     }()
     
     @objc func backButtonTapped() {
