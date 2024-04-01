@@ -58,8 +58,8 @@ final class GameView: UIView {
         addSubview(volumeLabel)
         volumeLabel.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
+            volumeLabel.topAnchor.constraint(equalTo: centerYAnchor, constant: 320),
             volumeLabel.centerXAnchor.constraint(equalTo: centerXAnchor),
-            volumeLabel.centerYAnchor.constraint(equalTo: centerYAnchor, constant: 320),
             volumeLabel.heightAnchor.constraint(equalToConstant: 70),
             volumeLabel.widthAnchor.constraint(equalToConstant: 100)
         ])
@@ -67,8 +67,8 @@ final class GameView: UIView {
         addSubview(decreaseVolume)
         decreaseVolume.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
-            decreaseVolume.centerXAnchor.constraint(equalTo: centerXAnchor, constant: -130),
-            decreaseVolume.centerYAnchor.constraint(equalTo: centerYAnchor, constant: 250),
+            decreaseVolume.centerXAnchor.constraint(equalTo: centerXAnchor, constant: -140),
+            decreaseVolume.centerYAnchor.constraint(equalTo: centerYAnchor, constant: 290),
             decreaseVolume.heightAnchor.constraint(equalToConstant: 60),
             decreaseVolume.widthAnchor.constraint(equalToConstant: 60)
         ])
@@ -76,8 +76,8 @@ final class GameView: UIView {
         addSubview(increaseVolume)
         increaseVolume.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
-            increaseVolume.centerXAnchor.constraint(equalTo: centerXAnchor, constant: 130),
-            increaseVolume.centerYAnchor.constraint(equalTo: centerYAnchor, constant: 250),
+            increaseVolume.centerXAnchor.constraint(equalTo: centerXAnchor, constant: 140),
+            increaseVolume.centerYAnchor.constraint(equalTo: centerYAnchor, constant: 290),
             increaseVolume.heightAnchor.constraint(equalToConstant: 60),
             increaseVolume.widthAnchor.constraint(equalToConstant: 60)
         ])
@@ -85,10 +85,91 @@ final class GameView: UIView {
         addSubview(volumeLevel1)
         volumeLevel1.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
-            volumeLevel1.centerXAnchor.constraint(equalTo: centerXAnchor, constant: -70),
-            volumeLevel1.centerYAnchor.constraint(equalTo: centerYAnchor, constant: 250),
+            volumeLevel1.bottomAnchor.constraint(equalTo: volumeLabel.topAnchor, constant: -20),
+            volumeLevel1.centerXAnchor.constraint(equalTo: centerXAnchor, constant: -90),
             volumeLevel1.heightAnchor.constraint(equalToConstant: 5),
             volumeLevel1.widthAnchor.constraint(equalToConstant: 10)
+        ])
+        
+        addSubview(volumeLevel2)
+        volumeLevel2.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+            volumeLevel2.bottomAnchor.constraint(equalTo: volumeLabel.topAnchor, constant: -22.5),
+            volumeLevel2.centerXAnchor.constraint(equalTo: centerXAnchor, constant: -70),
+            volumeLevel2.heightAnchor.constraint(equalToConstant: 10),
+            volumeLevel2.widthAnchor.constraint(equalToConstant: 10)
+        ])
+        
+        addSubview(volumeLevel3)
+        volumeLevel3.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+            volumeLevel3.bottomAnchor.constraint(equalTo: volumeLabel.topAnchor, constant: -25),
+            volumeLevel3.centerXAnchor.constraint(equalTo: centerXAnchor, constant: -50),
+            volumeLevel3.heightAnchor.constraint(equalToConstant: 15),
+            volumeLevel3.widthAnchor.constraint(equalToConstant: 10)
+        ])
+        addSubview(volumeLevel4)
+        volumeLevel4.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+            volumeLevel4.bottomAnchor.constraint(equalTo: volumeLabel.topAnchor, constant: -27.5),
+            volumeLevel4.centerXAnchor.constraint(equalTo: centerXAnchor, constant: -30),
+            volumeLevel4.heightAnchor.constraint(equalToConstant: 20),
+            volumeLevel4.widthAnchor.constraint(equalToConstant: 10)
+            
+        ])
+        
+        addSubview(volumeLevel5)
+        volumeLevel5.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+            volumeLevel5.bottomAnchor.constraint(equalTo: volumeLabel.topAnchor, constant: -30),
+            volumeLevel5.centerXAnchor.constraint(equalTo: centerXAnchor, constant: -10),
+            volumeLevel5.heightAnchor.constraint(equalToConstant: 25),
+            volumeLevel5.widthAnchor.constraint(equalToConstant: 10)
+        ])
+        
+        addSubview(volumeLevel6)
+        volumeLevel6.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+            volumeLevel6.bottomAnchor.constraint(equalTo: volumeLabel.topAnchor, constant: -32.5),
+            volumeLevel6.centerXAnchor.constraint(equalTo: centerXAnchor, constant: 10),
+            volumeLevel6.heightAnchor.constraint(equalToConstant: 30),
+            volumeLevel6.widthAnchor.constraint(equalToConstant: 10)
+        ])
+        
+        addSubview(volumeLevel7)
+        volumeLevel7.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+            volumeLevel7.bottomAnchor.constraint(equalTo: volumeLabel.topAnchor, constant: -35),
+            volumeLevel7.centerXAnchor.constraint(equalTo: centerXAnchor, constant: 30),
+            volumeLevel7.heightAnchor.constraint(equalToConstant: 35),
+            volumeLevel7.widthAnchor.constraint(equalToConstant: 10)
+        ])
+        
+        addSubview(volumeLevel8)
+        volumeLevel8.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+            volumeLevel8.bottomAnchor.constraint(equalTo: volumeLabel.topAnchor, constant: -37.5),
+            volumeLevel8.centerXAnchor.constraint(equalTo: centerXAnchor, constant: 50),
+            volumeLevel8.heightAnchor.constraint(equalToConstant: 40),
+            volumeLevel8.widthAnchor.constraint(equalToConstant: 10)
+        ])
+        
+        addSubview(volumeLevel9)
+        volumeLevel9.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+            volumeLevel9.bottomAnchor.constraint(equalTo: volumeLabel.topAnchor, constant: -40),
+            volumeLevel9.centerXAnchor.constraint(equalTo: centerXAnchor, constant: 70),
+            volumeLevel9.heightAnchor.constraint(equalToConstant: 45),
+            volumeLevel9.widthAnchor.constraint(equalToConstant: 10)
+        ])
+        
+        addSubview(volumeLevel10)
+        volumeLevel10.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+            volumeLevel10.bottomAnchor.constraint(equalTo: volumeLabel.topAnchor, constant: -42.5),
+            volumeLevel10.centerXAnchor.constraint(equalTo: centerXAnchor, constant: 90),
+            volumeLevel10.heightAnchor.constraint(equalToConstant: 50),
+            volumeLevel10.widthAnchor.constraint(equalToConstant: 10)
         ])
         
         addSubview(backButton)
@@ -167,6 +248,96 @@ final class GameView: UIView {
     }()
     
     private let volumeLevel1: UIProgressView = {
+        let volumeLevel = UIProgressView(progressViewStyle: .bar)
+        volumeLevel.trackTintColor = .clear
+        volumeLevel.progressTintColor = .systemPink
+        volumeLevel.transform = CGAffineTransform(rotationAngle: rotationAngle)
+        volumeLevel.transform = CGAffineTransformMakeScale(1, 2)
+        volumeLevel.setProgress(100, animated: false)
+        return volumeLevel
+    }()
+    
+    private let volumeLevel2: UIProgressView = {
+        let volumeLevel = UIProgressView(progressViewStyle: .bar)
+        volumeLevel.trackTintColor = .clear
+        volumeLevel.progressTintColor = .systemPink
+        volumeLevel.transform = CGAffineTransform(rotationAngle: rotationAngle)
+        volumeLevel.transform = CGAffineTransformMakeScale(1, 2)
+        volumeLevel.setProgress(100, animated: false)
+        return volumeLevel
+    }()
+    
+    private let volumeLevel3: UIProgressView = {
+        let volumeLevel = UIProgressView(progressViewStyle: .bar)
+        volumeLevel.trackTintColor = .clear
+        volumeLevel.progressTintColor = .systemPink
+        volumeLevel.transform = CGAffineTransform(rotationAngle: rotationAngle)
+        volumeLevel.transform = CGAffineTransformMakeScale(1, 2)
+        volumeLevel.setProgress(100, animated: false)
+        return volumeLevel
+    }()
+    
+    private let volumeLevel4: UIProgressView = {
+        let volumeLevel = UIProgressView(progressViewStyle: .bar)
+        volumeLevel.trackTintColor = .clear
+        volumeLevel.progressTintColor = .systemPink
+        volumeLevel.transform = CGAffineTransform(rotationAngle: rotationAngle)
+        volumeLevel.transform = CGAffineTransformMakeScale(1, 2)
+        volumeLevel.setProgress(100, animated: false)
+        return volumeLevel
+    }()
+    
+    private let volumeLevel5: UIProgressView = {
+        let volumeLevel = UIProgressView(progressViewStyle: .bar)
+        volumeLevel.trackTintColor = .clear
+        volumeLevel.progressTintColor = .systemPink
+        volumeLevel.transform = CGAffineTransform(rotationAngle: rotationAngle)
+        volumeLevel.transform = CGAffineTransformMakeScale(1, 2)
+        volumeLevel.setProgress(100, animated: false)
+        return volumeLevel
+    }()
+    
+    private let volumeLevel6: UIProgressView = {
+        let volumeLevel = UIProgressView(progressViewStyle: .bar)
+        volumeLevel.trackTintColor = .clear
+        volumeLevel.progressTintColor = .systemPink
+        volumeLevel.transform = CGAffineTransform(rotationAngle: rotationAngle)
+        volumeLevel.transform = CGAffineTransformMakeScale(1, 2)
+        volumeLevel.setProgress(100, animated: false)
+        return volumeLevel
+    }()
+    
+    private let volumeLevel7: UIProgressView = {
+        let volumeLevel = UIProgressView(progressViewStyle: .bar)
+        volumeLevel.trackTintColor = .clear
+        volumeLevel.progressTintColor = .systemPink
+        volumeLevel.transform = CGAffineTransform(rotationAngle: rotationAngle)
+        volumeLevel.transform = CGAffineTransformMakeScale(1, 2)
+        volumeLevel.setProgress(100, animated: false)
+        return volumeLevel
+    }()
+    
+    private let volumeLevel8: UIProgressView = {
+        let volumeLevel = UIProgressView(progressViewStyle: .bar)
+        volumeLevel.trackTintColor = .clear
+        volumeLevel.progressTintColor = .systemPink
+        volumeLevel.transform = CGAffineTransform(rotationAngle: rotationAngle)
+        volumeLevel.transform = CGAffineTransformMakeScale(1, 2)
+        volumeLevel.setProgress(100, animated: false)
+        return volumeLevel
+    }()
+    
+    private let volumeLevel9: UIProgressView = {
+        let volumeLevel = UIProgressView(progressViewStyle: .bar)
+        volumeLevel.trackTintColor = .clear
+        volumeLevel.progressTintColor = .systemPink
+        volumeLevel.transform = CGAffineTransform(rotationAngle: rotationAngle)
+        volumeLevel.transform = CGAffineTransformMakeScale(1, 2)
+        volumeLevel.setProgress(100, animated: false)
+        return volumeLevel
+    }()
+    
+    private let volumeLevel10: UIProgressView = {
         let volumeLevel = UIProgressView(progressViewStyle: .bar)
         volumeLevel.trackTintColor = .clear
         volumeLevel.progressTintColor = .systemPink
