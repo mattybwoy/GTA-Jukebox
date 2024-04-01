@@ -34,6 +34,15 @@ final class GameScreenViewController: GenericViewController <GameView> {
 
 extension GameScreenViewController: GameScreenDelegate {
     
+    func didTapIncreaseVolume() {
+        viewModel.updateVolume += 1
+    }
+    
+    func didTapDecreaseVolume() {
+        viewModel.updateVolume -= 1
+    }
+    
+    
     func dismissScreen() {
         viewModel.dismiss()
     }

@@ -9,6 +9,8 @@ import UIKit
 
 protocol GameScreenDelegate: AnyObject {
     func dismissScreen()
+    func didTapIncreaseVolume()
+    func didTapDecreaseVolume()
 }
 
 final class GameView: UIView {
@@ -231,6 +233,7 @@ final class GameView: UIView {
         decrease.configuration = decreaseConfig
         decrease.contentVerticalAlignment = .fill
         decrease.contentHorizontalAlignment = .fill
+        decrease.addTarget(self, action: #selector(didTapDecreaseVolume), for: .touchUpInside)
         decrease.tintColor = .white
         return decrease
     }()
@@ -243,6 +246,7 @@ final class GameView: UIView {
         increase.configuration = increaseConfig
         increase.contentVerticalAlignment = .fill
         increase.contentHorizontalAlignment = .fill
+        increase.addTarget(self, action: #selector(didTapIncreaseVolume), for: .touchUpInside)
         increase.tintColor = .white
         return increase
     }()
@@ -251,6 +255,7 @@ final class GameView: UIView {
         let volumeLevel = UIProgressView(progressViewStyle: .bar)
         volumeLevel.trackTintColor = .clear
         volumeLevel.progressTintColor = .systemPink
+        volumeLevel.alpha = 0
         volumeLevel.transform = CGAffineTransform(rotationAngle: rotationAngle)
         volumeLevel.transform = CGAffineTransformMakeScale(1, 2)
         volumeLevel.setProgress(100, animated: false)
@@ -261,6 +266,7 @@ final class GameView: UIView {
         let volumeLevel = UIProgressView(progressViewStyle: .bar)
         volumeLevel.trackTintColor = .clear
         volumeLevel.progressTintColor = .systemPink
+        volumeLevel.alpha = 0
         volumeLevel.transform = CGAffineTransform(rotationAngle: rotationAngle)
         volumeLevel.transform = CGAffineTransformMakeScale(1, 2)
         volumeLevel.setProgress(100, animated: false)
@@ -271,6 +277,7 @@ final class GameView: UIView {
         let volumeLevel = UIProgressView(progressViewStyle: .bar)
         volumeLevel.trackTintColor = .clear
         volumeLevel.progressTintColor = .systemPink
+        volumeLevel.alpha = 0
         volumeLevel.transform = CGAffineTransform(rotationAngle: rotationAngle)
         volumeLevel.transform = CGAffineTransformMakeScale(1, 2)
         volumeLevel.setProgress(100, animated: false)
@@ -281,6 +288,7 @@ final class GameView: UIView {
         let volumeLevel = UIProgressView(progressViewStyle: .bar)
         volumeLevel.trackTintColor = .clear
         volumeLevel.progressTintColor = .systemPink
+        volumeLevel.alpha = 0
         volumeLevel.transform = CGAffineTransform(rotationAngle: rotationAngle)
         volumeLevel.transform = CGAffineTransformMakeScale(1, 2)
         volumeLevel.setProgress(100, animated: false)
@@ -291,6 +299,7 @@ final class GameView: UIView {
         let volumeLevel = UIProgressView(progressViewStyle: .bar)
         volumeLevel.trackTintColor = .clear
         volumeLevel.progressTintColor = .systemPink
+        volumeLevel.alpha = 0
         volumeLevel.transform = CGAffineTransform(rotationAngle: rotationAngle)
         volumeLevel.transform = CGAffineTransformMakeScale(1, 2)
         volumeLevel.setProgress(100, animated: false)
@@ -301,6 +310,7 @@ final class GameView: UIView {
         let volumeLevel = UIProgressView(progressViewStyle: .bar)
         volumeLevel.trackTintColor = .clear
         volumeLevel.progressTintColor = .systemPink
+        volumeLevel.alpha = 0
         volumeLevel.transform = CGAffineTransform(rotationAngle: rotationAngle)
         volumeLevel.transform = CGAffineTransformMakeScale(1, 2)
         volumeLevel.setProgress(100, animated: false)
@@ -311,6 +321,7 @@ final class GameView: UIView {
         let volumeLevel = UIProgressView(progressViewStyle: .bar)
         volumeLevel.trackTintColor = .clear
         volumeLevel.progressTintColor = .systemPink
+        volumeLevel.alpha = 0
         volumeLevel.transform = CGAffineTransform(rotationAngle: rotationAngle)
         volumeLevel.transform = CGAffineTransformMakeScale(1, 2)
         volumeLevel.setProgress(100, animated: false)
@@ -321,6 +332,7 @@ final class GameView: UIView {
         let volumeLevel = UIProgressView(progressViewStyle: .bar)
         volumeLevel.trackTintColor = .clear
         volumeLevel.progressTintColor = .systemPink
+        volumeLevel.alpha = 0
         volumeLevel.transform = CGAffineTransform(rotationAngle: rotationAngle)
         volumeLevel.transform = CGAffineTransformMakeScale(1, 2)
         volumeLevel.setProgress(100, animated: false)
@@ -331,6 +343,7 @@ final class GameView: UIView {
         let volumeLevel = UIProgressView(progressViewStyle: .bar)
         volumeLevel.trackTintColor = .clear
         volumeLevel.progressTintColor = .systemPink
+        volumeLevel.alpha = 0
         volumeLevel.transform = CGAffineTransform(rotationAngle: rotationAngle)
         volumeLevel.transform = CGAffineTransformMakeScale(1, 2)
         volumeLevel.setProgress(100, animated: false)
@@ -341,6 +354,7 @@ final class GameView: UIView {
         let volumeLevel = UIProgressView(progressViewStyle: .bar)
         volumeLevel.trackTintColor = .clear
         volumeLevel.progressTintColor = .systemPink
+        volumeLevel.alpha = 0
         volumeLevel.transform = CGAffineTransform(rotationAngle: rotationAngle)
         volumeLevel.transform = CGAffineTransformMakeScale(1, 2)
         volumeLevel.setProgress(100, animated: false)
@@ -349,6 +363,14 @@ final class GameView: UIView {
     
     @objc func backButtonTapped() {
         gameDelegate?.dismissScreen()
+    }
+    
+    @objc func didTapIncreaseVolume() {
+        gameDelegate?.didTapIncreaseVolume()
+    }
+    
+    @objc func didTapDecreaseVolume() {
+        gameDelegate?.didTapDecreaseVolume()
     }
     
 }
