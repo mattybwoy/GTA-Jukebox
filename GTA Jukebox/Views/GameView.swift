@@ -67,7 +67,7 @@ final class GameView: UIView {
         addSubview(decreaseVolume)
         decreaseVolume.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
-            decreaseVolume.centerXAnchor.constraint(equalTo: centerXAnchor, constant: -120),
+            decreaseVolume.centerXAnchor.constraint(equalTo: centerXAnchor, constant: -130),
             decreaseVolume.centerYAnchor.constraint(equalTo: centerYAnchor, constant: 250),
             decreaseVolume.heightAnchor.constraint(equalToConstant: 60),
             decreaseVolume.widthAnchor.constraint(equalToConstant: 60)
@@ -76,10 +76,19 @@ final class GameView: UIView {
         addSubview(increaseVolume)
         increaseVolume.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
-            increaseVolume.centerXAnchor.constraint(equalTo: centerXAnchor, constant: 120),
+            increaseVolume.centerXAnchor.constraint(equalTo: centerXAnchor, constant: 130),
             increaseVolume.centerYAnchor.constraint(equalTo: centerYAnchor, constant: 250),
             increaseVolume.heightAnchor.constraint(equalToConstant: 60),
             increaseVolume.widthAnchor.constraint(equalToConstant: 60)
+        ])
+        
+        addSubview(volumeLevel1)
+        volumeLevel1.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+            volumeLevel1.centerXAnchor.constraint(equalTo: centerXAnchor, constant: -70),
+            volumeLevel1.centerYAnchor.constraint(equalTo: centerYAnchor, constant: 250),
+            volumeLevel1.heightAnchor.constraint(equalToConstant: 5),
+            volumeLevel1.widthAnchor.constraint(equalToConstant: 10)
         ])
         
         addSubview(backButton)
@@ -133,29 +142,38 @@ final class GameView: UIView {
         return volumeLabel
     }()
     
-    private var decreaseVolume: UIButton = {
+    private let decreaseVolume: UIButton = {
         let decrease = UIButton(frame: CGRect(x: 0, y: 0, width: 50, height: 50))
         var decreaseConfig = UIButton.Configuration.plain()
-        decreaseConfig.image = UIImage(systemName: "play.circle", withConfiguration: UIImage.SymbolConfiguration(scale: .large))?.applyingSymbolConfiguration(.init(pointSize: 35))
+        decreaseConfig.image = UIImage(systemName: "speaker.minus.fill", withConfiguration: UIImage.SymbolConfiguration(scale: .large))?.applyingSymbolConfiguration(.init(pointSize: 25))
         decreaseConfig.contentInsets = .zero
         decrease.configuration = decreaseConfig
         decrease.contentVerticalAlignment = .fill
         decrease.contentHorizontalAlignment = .fill
-        decrease.transform = CGAffineTransform(scaleX: -1.0, y: 1.0)
         decrease.tintColor = .white
         return decrease
     }()
     
-    private var increaseVolume: UIButton = {
+    private let increaseVolume: UIButton = {
         let increase = UIButton(frame: CGRect(x: 0, y: 0, width: 50, height: 50))
         var increaseConfig = UIButton.Configuration.plain()
-        increaseConfig.image = UIImage(systemName: "play.circle", withConfiguration: UIImage.SymbolConfiguration(scale: .large))?.applyingSymbolConfiguration(.init(pointSize: 35))
+        increaseConfig.image = UIImage(systemName: "speaker.plus.fill", withConfiguration: UIImage.SymbolConfiguration(scale: .large))?.applyingSymbolConfiguration(.init(pointSize: 25))
         increaseConfig.contentInsets = .zero
         increase.configuration = increaseConfig
         increase.contentVerticalAlignment = .fill
         increase.contentHorizontalAlignment = .fill
         increase.tintColor = .white
         return increase
+    }()
+    
+    private let volumeLevel1: UIProgressView = {
+        let volumeLevel = UIProgressView(progressViewStyle: .bar)
+        volumeLevel.trackTintColor = .clear
+        volumeLevel.progressTintColor = .systemPink
+        volumeLevel.transform = CGAffineTransform(rotationAngle: rotationAngle)
+        volumeLevel.transform = CGAffineTransformMakeScale(1, 2)
+        volumeLevel.setProgress(100, animated: false)
+        return volumeLevel
     }()
     
     @objc func backButtonTapped() {
