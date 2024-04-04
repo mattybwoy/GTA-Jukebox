@@ -17,6 +17,7 @@ final class GameScreenViewController: GenericViewController <GameView> {
         self.viewModel = viewModel
         self.mapper = mapper
         super.init()
+        viewModel.gameUpdateDelegate = self
         rootView.gameDelegate = self
         rootView.radioPicker.dataSource = self
         rootView.radioPicker.delegate = self
@@ -45,6 +46,24 @@ extension GameScreenViewController: GameScreenDelegate {
     
     func dismissScreen() {
         viewModel.dismiss()
+    }
+    
+}
+
+extension GameScreenViewController: GameUpdateDelegate {
+    
+    func didUpdateVolume(newVolume: Int) {
+        let volumeArray: [UIProgressView] = [rootView.volumeLevel1, rootView.volumeLevel2, rootView.volumeLevel3, rootView.volumeLevel4, rootView.volumeLevel5, rootView.volumeLevel6, rootView.volumeLevel7, rootView.volumeLevel8, rootView.volumeLevel9, rootView.volumeLevel10]
+        
+        for (index, volume) in volumeArray.enumerated() {
+            if index < newVolume {
+                volume.alpha = 1
+            }
+            else {
+                volume.alpha = 0
+            }
+        }
+        
     }
     
 }

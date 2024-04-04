@@ -251,7 +251,7 @@ final class GameView: UIView {
         return increase
     }()
     
-    private let volumeLevel1: UIProgressView = {
+    let volumeLevel1: UIProgressView = {
         let volumeLevel = UIProgressView(progressViewStyle: .bar)
         volumeLevel.trackTintColor = .clear
         volumeLevel.progressTintColor = .systemPink
@@ -262,7 +262,7 @@ final class GameView: UIView {
         return volumeLevel
     }()
     
-    private let volumeLevel2: UIProgressView = {
+    let volumeLevel2: UIProgressView = {
         let volumeLevel = UIProgressView(progressViewStyle: .bar)
         volumeLevel.trackTintColor = .clear
         volumeLevel.progressTintColor = .systemPink
@@ -273,7 +273,7 @@ final class GameView: UIView {
         return volumeLevel
     }()
     
-    private let volumeLevel3: UIProgressView = {
+    let volumeLevel3: UIProgressView = {
         let volumeLevel = UIProgressView(progressViewStyle: .bar)
         volumeLevel.trackTintColor = .clear
         volumeLevel.progressTintColor = .systemPink
@@ -284,7 +284,7 @@ final class GameView: UIView {
         return volumeLevel
     }()
     
-    private let volumeLevel4: UIProgressView = {
+    let volumeLevel4: UIProgressView = {
         let volumeLevel = UIProgressView(progressViewStyle: .bar)
         volumeLevel.trackTintColor = .clear
         volumeLevel.progressTintColor = .systemPink
@@ -295,7 +295,7 @@ final class GameView: UIView {
         return volumeLevel
     }()
     
-    private let volumeLevel5: UIProgressView = {
+    let volumeLevel5: UIProgressView = {
         let volumeLevel = UIProgressView(progressViewStyle: .bar)
         volumeLevel.trackTintColor = .clear
         volumeLevel.progressTintColor = .systemPink
@@ -306,7 +306,7 @@ final class GameView: UIView {
         return volumeLevel
     }()
     
-    private let volumeLevel6: UIProgressView = {
+    let volumeLevel6: UIProgressView = {
         let volumeLevel = UIProgressView(progressViewStyle: .bar)
         volumeLevel.trackTintColor = .clear
         volumeLevel.progressTintColor = .systemPink
@@ -317,7 +317,7 @@ final class GameView: UIView {
         return volumeLevel
     }()
     
-    private let volumeLevel7: UIProgressView = {
+    let volumeLevel7: UIProgressView = {
         let volumeLevel = UIProgressView(progressViewStyle: .bar)
         volumeLevel.trackTintColor = .clear
         volumeLevel.progressTintColor = .systemPink
@@ -328,7 +328,7 @@ final class GameView: UIView {
         return volumeLevel
     }()
     
-    private let volumeLevel8: UIProgressView = {
+    let volumeLevel8: UIProgressView = {
         let volumeLevel = UIProgressView(progressViewStyle: .bar)
         volumeLevel.trackTintColor = .clear
         volumeLevel.progressTintColor = .systemPink
@@ -339,7 +339,7 @@ final class GameView: UIView {
         return volumeLevel
     }()
     
-    private let volumeLevel9: UIProgressView = {
+    let volumeLevel9: UIProgressView = {
         let volumeLevel = UIProgressView(progressViewStyle: .bar)
         volumeLevel.trackTintColor = .clear
         volumeLevel.progressTintColor = .systemPink
@@ -350,7 +350,7 @@ final class GameView: UIView {
         return volumeLevel
     }()
     
-    private let volumeLevel10: UIProgressView = {
+    let volumeLevel10: UIProgressView = {
         let volumeLevel = UIProgressView(progressViewStyle: .bar)
         volumeLevel.trackTintColor = .clear
         volumeLevel.progressTintColor = .systemPink

@@ -7,8 +7,13 @@
 
 import Foundation
 
+protocol GameUpdateDelegate: AnyObject {
+    func didUpdateVolume(newVolume: Int)
+}
+
 final class GameViewModel {
     
+    weak var gameUpdateDelegate: GameUpdateDelegate?
     let gameNavigationDelegate: GameNavigationDelegate
     let game: GameSelection
     private var volumeLevel = 5
@@ -26,14 +31,17 @@ final class GameViewModel {
         set {
             if volumeLevel == 10 && newValue == 9 {
                 volumeLevel = newValue
+                gameUpdateDelegate?.didUpdateVolume(newVolume: volumeLevel)
             }
             if volumeLevel == 1 && newValue == 2 {
                 volumeLevel = newValue
+                gameUpdateDelegate?.didUpdateVolume(newVolume: volumeLevel)
             }
             if volumeLimit.contains(volumeLevel) {
                 volumeLevel = newValue
+                gameUpdateDelegate?.didUpdateVolume(newVolume: volumeLevel)
             }
-            print(volumeLevel)
+            //print(volumeLevel)
             return
         }
     }
