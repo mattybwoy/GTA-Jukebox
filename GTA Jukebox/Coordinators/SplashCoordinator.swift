@@ -21,7 +21,7 @@ final class SplashCoordinator: Coordinator {
         self.navigator = navigator
         self.factory = factory
     }
-    
+
     func start(transition: Transition, onDismissed: (() -> Void)?) {
         let viewController: ViewController = factory.makeSplashScreenViewController(navigationDelegate: self, onDismissed: onDismissed)
         navigator.navigate(to: viewController, transition: transition)
