@@ -41,7 +41,6 @@ final class GameViewModel {
                 volumeLevel = newValue
                 gameUpdateDelegate?.didUpdateVolume(newVolume: volumeLevel)
             }
-            //print(volumeLevel)
             return
         }
     }

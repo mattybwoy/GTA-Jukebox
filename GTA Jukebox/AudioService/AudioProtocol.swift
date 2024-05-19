@@ -10,5 +10,5 @@ import AVFoundation
 protocol AudioProtocol {
     var audioPlayer: AVAudioPlayer { get }
     func startRadio()
-    func loadStation(station: String)
+    func loadSelectedStation(station: String)
 }

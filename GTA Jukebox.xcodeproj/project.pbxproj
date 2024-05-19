@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0A311C8F2BED581B007EAC59 /* headradio.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 0A311C8E2BED581B007EAC59 /* headradio.mp3 */; };
+		0A311C912BF7EC55007EAC59 /* chatterboxfm.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 0A311C902BF7EC55007EAC59 /* chatterboxfm.mp3 */; };
+		0A311C932BF8B024007EAC59 /* flash_fm.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 0A311C922BF8B024007EAC59 /* flash_fm.mp3 */; };
 		0AC244342B7EA60000F33D92 /* SelectViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AC244332B7EA60000F33D92 /* SelectViewModel.swift */; };
 		0AC244362B8681B400F33D92 /* SplashScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AC244352B8681B400F33D92 /* SplashScreenViewController.swift */; };
 		0AC244382B8681F000F33D92 /* SplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AC244372B8681F000F33D92 /* SplashView.swift */; };
@@ -75,6 +78,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0A311C8E2BED581B007EAC59 /* headradio.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = headradio.mp3; path = ../../../../../../../Downloads/GTA3Stations/headradio.mp3; sourceTree = "<group>"; };
+		0A311C902BF7EC55007EAC59 /* chatterboxfm.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = chatterboxfm.mp3; path = ../../../../../../../Downloads/GTA3Stations/chatterboxfm.mp3; sourceTree = "<group>"; };
+		0A311C922BF8B024007EAC59 /* flash_fm.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = flash_fm.mp3; path = ../../../../../../../Downloads/ViceCityStations/flash_fm.mp3; sourceTree = "<group>"; };
 		0AC244332B7EA60000F33D92 /* SelectViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectViewModel.swift; sourceTree = "<group>"; };
 		0AC244352B8681B400F33D92 /* SplashScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreenViewController.swift; sourceTree = "<group>"; };
 		0AC244372B8681F000F33D92 /* SplashView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashView.swift; sourceTree = "<group>"; };
@@ -155,6 +161,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0A311C8D2BED57EA007EAC59 /* RadioStations */ = {
+			isa = PBXGroup;
+			children = (
+				0A311C902BF7EC55007EAC59 /* chatterboxfm.mp3 */,
+				0A311C8E2BED581B007EAC59 /* headradio.mp3 */,
+				0A311C922BF8B024007EAC59 /* flash_fm.mp3 */,
+			);
+			path = RadioStations;
+			sourceTree = "<group>";
+		};
 		0AC244392B8A099E00F33D92 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
@@ -253,6 +269,7 @@
 				341E421F2AC9B87D00681B63 /* ViewControllers */,
 				341E42242AC9BEBC00681B63 /* Views */,
 				0AC244392B8A099E00F33D92 /* ViewModels */,
+				0A311C8D2BED57EA007EAC59 /* RadioStations */,
 				341E42252AC9C38800681B63 /* Fonts */,
 				341E41EF2AC99C5E00681B63 /* Main.storyboard */,
 				341E41F22AC99C6100681B63 /* Assets.xcassets */,
@@ -425,7 +442,10 @@
 				341E41F32AC99C6100681B63 /* Assets.xcassets in Resources */,
 				341E41F12AC99C5E00681B63 /* Main.storyboard in Resources */,
 				341E421B2AC9B6CD00681B63 /* pricedown.otf in Resources */,
+				0A311C8F2BED581B007EAC59 /* headradio.mp3 in Resources */,
 				341E421E2AC9B7BE00681B63 /* GTA.png in Resources */,
+				0A311C932BF8B024007EAC59 /* flash_fm.mp3 in Resources */,
+				0A311C912BF7EC55007EAC59 /* chatterboxfm.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

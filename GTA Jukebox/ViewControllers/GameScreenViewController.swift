@@ -12,15 +12,19 @@ final class GameScreenViewController: GenericViewController <GameView> {
     
     private let viewModel: GameViewModel
     private let mapper: MusicMapper
+    var audioPlayer: RadioPlayer?
     
-    init(viewModel: GameViewModel, mapper: MusicMapper) {
+    init(viewModel: GameViewModel, mapper: MusicMapper, audioPlayer: RadioPlayer) {
         self.viewModel = viewModel
         self.mapper = mapper
+        self.audioPlayer = audioPlayer
         super.init()
         viewModel.gameUpdateDelegate = self
         rootView.gameDelegate = self
         rootView.radioPicker.dataSource = self
         rootView.radioPicker.delegate = self
+        viewModel.updateVolume = 5
+        playRadioStream()
     }
     
     override func viewDidLoad() {
@@ -31,6 +35,10 @@ final class GameScreenViewController: GenericViewController <GameView> {
         self.view = GameView(game: viewModel.game)
     }
     
+    func playRadioStream() {
+        //Action by viewModel
+        audioPlayer?.startRadio()
+    }
 }
 
 extension GameScreenViewController: GameScreenDelegate {
@@ -63,7 +71,6 @@ extension GameScreenViewController: GameUpdateDelegate {
                 volume.alpha = 0
             }
         }
-        
     }
     
 }

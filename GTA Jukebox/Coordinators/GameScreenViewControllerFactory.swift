@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import AVFoundation
 
 protocol GameScreenViewControllerFactory {
     func makeGameScreenViewController(navigationDelegate: GameNavigationDelegate, gameSelected: GameSelection, onDismissed: (() -> Void)?) -> GameScreenViewController
@@ -15,7 +16,8 @@ extension DependencyContainer: GameScreenViewControllerFactory {
     
     func makeGameScreenViewController(navigationDelegate: GameNavigationDelegate, gameSelected: GameSelection, onDismissed: (() -> Void)?) -> GameScreenViewController {
         let GameViewModel = GameViewModel(gameNavigationDelegate: navigationDelegate, game: gameSelected)
-        let GameScreenViewController = GameScreenViewController(viewModel: GameViewModel, mapper: MusicMapper(game: gameSelected))
+        let RadioPlayer = RadioPlayer(audioPlayer: AVAudioPlayer())
+        let GameScreenViewController = GameScreenViewController(viewModel: GameViewModel, mapper: MusicMapper(game: gameSelected), audioPlayer: RadioPlayer)
         GameScreenViewController.onDismissed = onDismissed
         return GameScreenViewController
     }
