@@ -18,7 +18,7 @@ final class GameViewModel {
     let game: GameSelection
     private var audioPlayer: RadioPlayer
     private var volumeLevel = 5
-    private var volumeLimit = 2..<10
+    private var volumeLimit = 0...10
     
     init(gameNavigationDelegate: GameNavigationDelegate, game: GameSelection, audioPlayer: RadioPlayer) {
         self.gameNavigationDelegate = gameNavigationDelegate
@@ -30,18 +30,12 @@ final class GameViewModel {
         get {
            volumeLevel
         }
-        set {
-            if volumeLevel == 10 && newValue == 9 {
-                volumeLevel = newValue
+        set(newVolume) {
+            if volumeLimit.contains(newVolume) {
+                volumeLevel = newVolume
+                audioPlayer.audioPlayer.volume = Float(newVolume)
+                gameUpdateDelegate?.didUpdateVolume(newVolume: volumeLevel)
             }
-            if volumeLevel == 1 && newValue == 2 {
-                volumeLevel = newValue
-            }
-            if volumeLimit.contains(volumeLevel) {
-                volumeLevel = newValue
-            }
-            audioPlayer.audioPlayer.volume = Float(newValue)
-            gameUpdateDelegate?.didUpdateVolume(newVolume: volumeLevel)
             return
         }
     }

@@ -99,8 +99,14 @@ extension GameScreenViewController: UIPickerViewDataSource, UIPickerViewDelegate
         myView.addSubview(myImageView)
         return myView
     }
+    
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        let radioStationsList = mapper.radioChannelLoader
+        
+        print(radioStationsList[row])
+    }
 }
 
-extension GameScreenViewController {
+private extension GameScreenViewController {
     static private var rotationAngle: CGFloat! = 90 * (.pi/180)
 }
