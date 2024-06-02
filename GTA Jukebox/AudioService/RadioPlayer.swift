@@ -19,8 +19,8 @@ final class RadioPlayer: AudioProtocol {
     func startRadio() {
         let gta3 = StationLoader.gta3Stations
         let viceCity = StationLoader.viceCityStations
-//        let sanAn = StationLoader.sanAndreasStations
-        let radioStations: [String] = viceCity
+        let sanAn = StationLoader.sanAndreasStations
+        let radioStations: [String] = sanAn
         for radioStation in radioStations {
             print(radioStation.lowercased())
             let path = Bundle.main.url(forResource: radioStation.lowercased(), withExtension: "mp3")
