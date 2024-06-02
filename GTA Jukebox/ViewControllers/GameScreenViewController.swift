@@ -48,7 +48,6 @@ extension GameScreenViewController: GameScreenDelegate {
         viewModel.updateVolume -= 1
     }
     
-    
     func dismissScreen() {
         viewModel.dismiss()
     }

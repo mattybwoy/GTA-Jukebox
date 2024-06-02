@@ -15,18 +15,28 @@ final class RadioPlayer: AudioProtocol {
         self.audioPlayer = audioPlayer
     }
     
+
     func startRadio() {
-        let path = Bundle.main.url(forResource: "flash_fm", withExtension: "mp3")
-        do {
-            audioPlayer = try AVAudioPlayer(contentsOf: path!)
-            audioPlayer.play()
-            audioPlayer.numberOfLoops = -1
-        } catch {
-            print(LocalizedError.self)
+        let gta3 = StationLoader.gta3Stations
+//        let viceCity = StationLoader.viceCityStations
+//        let sanAn = StationLoader.sanAndreasStations
+        let radioStations: [String] = gta3
+        for radioStation in radioStations {
+            print(radioStation.lowercased())
+            let path = Bundle.main.url(forResource: radioStation.lowercased(), withExtension: "mp3")
+            do {
+                audioPlayer = try AVAudioPlayer(contentsOf: path!)
+                audioPlayer.play()
+                audioPlayer.numberOfLoops = -1
+            } catch {
+                print(LocalizedError.self)
+            }
         }
+
     }
     
     func loadSelectedStation(station: String) {
+        
     }
     
 }

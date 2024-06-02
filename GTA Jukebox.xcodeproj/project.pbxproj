@@ -7,9 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0A311C8F2BED581B007EAC59 /* headradio.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 0A311C8E2BED581B007EAC59 /* headradio.mp3 */; };
 		0A311C912BF7EC55007EAC59 /* chatterboxfm.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 0A311C902BF7EC55007EAC59 /* chatterboxfm.mp3 */; };
 		0A311C932BF8B024007EAC59 /* flash_fm.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 0A311C922BF8B024007EAC59 /* flash_fm.mp3 */; };
+		0A52D8DE2C0B7CE700EEB41F /* kjahradio.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 0A52D8D62C0B7CE700EEB41F /* kjahradio.mp3 */; };
+		0A52D8DF2C0B7CE700EEB41F /* lips106.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 0A52D8D72C0B7CE700EEB41F /* lips106.mp3 */; };
+		0A52D8E12C0B7CE700EEB41F /* flashback_95.6.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 0A52D8D92C0B7CE700EEB41F /* flashback_95.6.mp3 */; };
+		0A52D8E22C0B7CE700EEB41F /* gameradio.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 0A52D8DA2C0B7CE700EEB41F /* gameradio.mp3 */; };
+		0A52D8E32C0B7CE700EEB41F /* msxfm.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 0A52D8DB2C0B7CE700EEB41F /* msxfm.mp3 */; };
+		0A52D8E42C0B7CE700EEB41F /* doublecleffm.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 0A52D8DC2C0B7CE700EEB41F /* doublecleffm.mp3 */; };
+		0A52D8E52C0B7CE700EEB41F /* rise_fm.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 0A52D8DD2C0B7CE700EEB41F /* rise_fm.mp3 */; };
+		0A52D8E72C0B80FA00EEB41F /* headradio.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 0A52D8E62C0B80FA00EEB41F /* headradio.mp3 */; };
 		0AC244342B7EA60000F33D92 /* SelectViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AC244332B7EA60000F33D92 /* SelectViewModel.swift */; };
 		0AC244362B8681B400F33D92 /* SplashScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AC244352B8681B400F33D92 /* SplashScreenViewController.swift */; };
 		0AC244382B8681F000F33D92 /* SplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AC244372B8681F000F33D92 /* SplashView.swift */; };
@@ -78,9 +85,16 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0A311C8E2BED581B007EAC59 /* headradio.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = headradio.mp3; path = ../../../../../../../Downloads/GTA3Stations/headradio.mp3; sourceTree = "<group>"; };
 		0A311C902BF7EC55007EAC59 /* chatterboxfm.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = chatterboxfm.mp3; path = ../../../../../../../Downloads/GTA3Stations/chatterboxfm.mp3; sourceTree = "<group>"; };
 		0A311C922BF8B024007EAC59 /* flash_fm.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = flash_fm.mp3; path = ../../../../../../../Downloads/ViceCityStations/flash_fm.mp3; sourceTree = "<group>"; };
+		0A52D8D62C0B7CE700EEB41F /* kjahradio.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = kjahradio.mp3; path = ../../../../../../../Downloads/GTA3Stations/kjahradio.mp3; sourceTree = "<group>"; };
+		0A52D8D72C0B7CE700EEB41F /* lips106.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = lips106.mp3; path = ../../../../../../../Downloads/GTA3Stations/lips106.mp3; sourceTree = "<group>"; };
+		0A52D8D92C0B7CE700EEB41F /* flashback_95.6.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = flashback_95.6.mp3; path = ../../../../../../../Downloads/GTA3Stations/flashback_95.6.mp3; sourceTree = "<group>"; };
+		0A52D8DA2C0B7CE700EEB41F /* gameradio.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = gameradio.mp3; path = ../../../../../../../Downloads/GTA3Stations/gameradio.mp3; sourceTree = "<group>"; };
+		0A52D8DB2C0B7CE700EEB41F /* msxfm.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = msxfm.mp3; path = ../../../../../../../Downloads/GTA3Stations/msxfm.mp3; sourceTree = "<group>"; };
+		0A52D8DC2C0B7CE700EEB41F /* doublecleffm.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = doublecleffm.mp3; path = ../../../../../../../Downloads/GTA3Stations/doublecleffm.mp3; sourceTree = "<group>"; };
+		0A52D8DD2C0B7CE700EEB41F /* rise_fm.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = rise_fm.mp3; path = ../../../../../../../Downloads/GTA3Stations/rise_fm.mp3; sourceTree = "<group>"; };
+		0A52D8E62C0B80FA00EEB41F /* headradio.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = headradio.mp3; path = ../../../../../../../Downloads/GTA3Stations/headradio.mp3; sourceTree = "<group>"; };
 		0AC244332B7EA60000F33D92 /* SelectViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectViewModel.swift; sourceTree = "<group>"; };
 		0AC244352B8681B400F33D92 /* SplashScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreenViewController.swift; sourceTree = "<group>"; };
 		0AC244372B8681F000F33D92 /* SplashView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashView.swift; sourceTree = "<group>"; };
@@ -165,7 +179,14 @@
 			isa = PBXGroup;
 			children = (
 				0A311C902BF7EC55007EAC59 /* chatterboxfm.mp3 */,
-				0A311C8E2BED581B007EAC59 /* headradio.mp3 */,
+				0A52D8DC2C0B7CE700EEB41F /* doublecleffm.mp3 */,
+				0A52D8D92C0B7CE700EEB41F /* flashback_95.6.mp3 */,
+				0A52D8DA2C0B7CE700EEB41F /* gameradio.mp3 */,
+				0A52D8E62C0B80FA00EEB41F /* headradio.mp3 */,
+				0A52D8D62C0B7CE700EEB41F /* kjahradio.mp3 */,
+				0A52D8D72C0B7CE700EEB41F /* lips106.mp3 */,
+				0A52D8DB2C0B7CE700EEB41F /* msxfm.mp3 */,
+				0A52D8DD2C0B7CE700EEB41F /* rise_fm.mp3 */,
 				0A311C922BF8B024007EAC59 /* flash_fm.mp3 */,
 			);
 			path = RadioStations;
@@ -439,12 +460,19 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0A52D8E42C0B7CE700EEB41F /* doublecleffm.mp3 in Resources */,
+				0A52D8DE2C0B7CE700EEB41F /* kjahradio.mp3 in Resources */,
+				0A52D8E72C0B80FA00EEB41F /* headradio.mp3 in Resources */,
+				0A52D8E12C0B7CE700EEB41F /* flashback_95.6.mp3 in Resources */,
 				341E41F32AC99C6100681B63 /* Assets.xcassets in Resources */,
 				341E41F12AC99C5E00681B63 /* Main.storyboard in Resources */,
+				0A52D8E52C0B7CE700EEB41F /* rise_fm.mp3 in Resources */,
 				341E421B2AC9B6CD00681B63 /* pricedown.otf in Resources */,
-				0A311C8F2BED581B007EAC59 /* headradio.mp3 in Resources */,
+				0A52D8E32C0B7CE700EEB41F /* msxfm.mp3 in Resources */,
 				341E421E2AC9B7BE00681B63 /* GTA.png in Resources */,
 				0A311C932BF8B024007EAC59 /* flash_fm.mp3 in Resources */,
+				0A52D8E22C0B7CE700EEB41F /* gameradio.mp3 in Resources */,
+				0A52D8DF2C0B7CE700EEB41F /* lips106.mp3 in Resources */,
 				0A311C912BF7EC55007EAC59 /* chatterboxfm.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
