@@ -17,6 +17,15 @@
 		0A52D8E42C0B7CE700EEB41F /* doublecleffm.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 0A52D8DC2C0B7CE700EEB41F /* doublecleffm.mp3 */; };
 		0A52D8E52C0B7CE700EEB41F /* rise_fm.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 0A52D8DD2C0B7CE700EEB41F /* rise_fm.mp3 */; };
 		0A52D8E72C0B80FA00EEB41F /* headradio.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 0A52D8E62C0B80FA00EEB41F /* headradio.mp3 */; };
+		0A52D8F12C0CC9CF00EEB41F /* kchat.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 0A52D8E82C0CC9CF00EEB41F /* kchat.mp3 */; };
+		0A52D8F22C0CC9CF00EEB41F /* wildstyle.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 0A52D8E92C0CC9CF00EEB41F /* wildstyle.mp3 */; };
+		0A52D8F32C0CC9CF00EEB41F /* vrock.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 0A52D8EA2C0CC9CF00EEB41F /* vrock.mp3 */; };
+		0A52D8F42C0CC9CF00EEB41F /* flash_fm.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 0A52D8EB2C0CC9CF00EEB41F /* flash_fm.mp3 */; };
+		0A52D8F52C0CC9CF00EEB41F /* fever_105.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 0A52D8EC2C0CC9CF00EEB41F /* fever_105.mp3 */; };
+		0A52D8F62C0CC9CF00EEB41F /* wave103.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 0A52D8ED2C0CC9CF00EEB41F /* wave103.mp3 */; };
+		0A52D8F72C0CC9CF00EEB41F /* emotion98.3.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 0A52D8EE2C0CC9CF00EEB41F /* emotion98.3.mp3 */; };
+		0A52D8F82C0CC9CF00EEB41F /* radioespantoso.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 0A52D8EF2C0CC9CF00EEB41F /* radioespantoso.mp3 */; };
+		0A52D8F92C0CC9CF00EEB41F /* vcpr.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 0A52D8F02C0CC9CF00EEB41F /* vcpr.mp3 */; };
 		0AC244342B7EA60000F33D92 /* SelectViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AC244332B7EA60000F33D92 /* SelectViewModel.swift */; };
 		0AC244362B8681B400F33D92 /* SplashScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AC244352B8681B400F33D92 /* SplashScreenViewController.swift */; };
 		0AC244382B8681F000F33D92 /* SplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AC244372B8681F000F33D92 /* SplashView.swift */; };
@@ -95,6 +104,15 @@
 		0A52D8DC2C0B7CE700EEB41F /* doublecleffm.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = doublecleffm.mp3; path = ../../../../../../../Downloads/GTA3Stations/doublecleffm.mp3; sourceTree = "<group>"; };
 		0A52D8DD2C0B7CE700EEB41F /* rise_fm.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = rise_fm.mp3; path = ../../../../../../../Downloads/GTA3Stations/rise_fm.mp3; sourceTree = "<group>"; };
 		0A52D8E62C0B80FA00EEB41F /* headradio.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = headradio.mp3; path = ../../../../../../../Downloads/GTA3Stations/headradio.mp3; sourceTree = "<group>"; };
+		0A52D8E82C0CC9CF00EEB41F /* kchat.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = kchat.mp3; path = ../../../../../../../Downloads/ViceCityStations/kchat.mp3; sourceTree = "<group>"; };
+		0A52D8E92C0CC9CF00EEB41F /* wildstyle.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = wildstyle.mp3; path = ../../../../../../../Downloads/ViceCityStations/wildstyle.mp3; sourceTree = "<group>"; };
+		0A52D8EA2C0CC9CF00EEB41F /* vrock.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = vrock.mp3; path = ../../../../../../../Downloads/ViceCityStations/vrock.mp3; sourceTree = "<group>"; };
+		0A52D8EB2C0CC9CF00EEB41F /* flash_fm.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = flash_fm.mp3; path = ../../../../../../../Downloads/ViceCityStations/flash_fm.mp3; sourceTree = "<group>"; };
+		0A52D8EC2C0CC9CF00EEB41F /* fever_105.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = fever_105.mp3; path = ../../../../../../../Downloads/ViceCityStations/fever_105.mp3; sourceTree = "<group>"; };
+		0A52D8ED2C0CC9CF00EEB41F /* wave103.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = wave103.mp3; path = ../../../../../../../Downloads/ViceCityStations/wave103.mp3; sourceTree = "<group>"; };
+		0A52D8EE2C0CC9CF00EEB41F /* emotion98.3.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = emotion98.3.mp3; path = ../../../../../../../Downloads/ViceCityStations/emotion98.3.mp3; sourceTree = "<group>"; };
+		0A52D8EF2C0CC9CF00EEB41F /* radioespantoso.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = radioespantoso.mp3; path = ../../../../../../../Downloads/ViceCityStations/radioespantoso.mp3; sourceTree = "<group>"; };
+		0A52D8F02C0CC9CF00EEB41F /* vcpr.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = vcpr.mp3; path = ../../../../../../../Downloads/ViceCityStations/vcpr.mp3; sourceTree = "<group>"; };
 		0AC244332B7EA60000F33D92 /* SelectViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectViewModel.swift; sourceTree = "<group>"; };
 		0AC244352B8681B400F33D92 /* SplashScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreenViewController.swift; sourceTree = "<group>"; };
 		0AC244372B8681F000F33D92 /* SplashView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashView.swift; sourceTree = "<group>"; };
@@ -178,6 +196,15 @@
 		0A311C8D2BED57EA007EAC59 /* RadioStations */ = {
 			isa = PBXGroup;
 			children = (
+				0A52D8EE2C0CC9CF00EEB41F /* emotion98.3.mp3 */,
+				0A52D8EC2C0CC9CF00EEB41F /* fever_105.mp3 */,
+				0A52D8EB2C0CC9CF00EEB41F /* flash_fm.mp3 */,
+				0A52D8E82C0CC9CF00EEB41F /* kchat.mp3 */,
+				0A52D8EF2C0CC9CF00EEB41F /* radioespantoso.mp3 */,
+				0A52D8F02C0CC9CF00EEB41F /* vcpr.mp3 */,
+				0A52D8EA2C0CC9CF00EEB41F /* vrock.mp3 */,
+				0A52D8ED2C0CC9CF00EEB41F /* wave103.mp3 */,
+				0A52D8E92C0CC9CF00EEB41F /* wildstyle.mp3 */,
 				0A311C902BF7EC55007EAC59 /* chatterboxfm.mp3 */,
 				0A52D8DC2C0B7CE700EEB41F /* doublecleffm.mp3 */,
 				0A52D8D92C0B7CE700EEB41F /* flashback_95.6.mp3 */,
@@ -462,7 +489,10 @@
 			files = (
 				0A52D8E42C0B7CE700EEB41F /* doublecleffm.mp3 in Resources */,
 				0A52D8DE2C0B7CE700EEB41F /* kjahradio.mp3 in Resources */,
+				0A52D8F32C0CC9CF00EEB41F /* vrock.mp3 in Resources */,
+				0A52D8F82C0CC9CF00EEB41F /* radioespantoso.mp3 in Resources */,
 				0A52D8E72C0B80FA00EEB41F /* headradio.mp3 in Resources */,
+				0A52D8F72C0CC9CF00EEB41F /* emotion98.3.mp3 in Resources */,
 				0A52D8E12C0B7CE700EEB41F /* flashback_95.6.mp3 in Resources */,
 				341E41F32AC99C6100681B63 /* Assets.xcassets in Resources */,
 				341E41F12AC99C5E00681B63 /* Main.storyboard in Resources */,
@@ -471,8 +501,14 @@
 				0A52D8E32C0B7CE700EEB41F /* msxfm.mp3 in Resources */,
 				341E421E2AC9B7BE00681B63 /* GTA.png in Resources */,
 				0A311C932BF8B024007EAC59 /* flash_fm.mp3 in Resources */,
+				0A52D8F62C0CC9CF00EEB41F /* wave103.mp3 in Resources */,
 				0A52D8E22C0B7CE700EEB41F /* gameradio.mp3 in Resources */,
+				0A52D8F22C0CC9CF00EEB41F /* wildstyle.mp3 in Resources */,
 				0A52D8DF2C0B7CE700EEB41F /* lips106.mp3 in Resources */,
+				0A52D8F92C0CC9CF00EEB41F /* vcpr.mp3 in Resources */,
+				0A52D8F12C0CC9CF00EEB41F /* kchat.mp3 in Resources */,
+				0A52D8F42C0CC9CF00EEB41F /* flash_fm.mp3 in Resources */,
+				0A52D8F52C0CC9CF00EEB41F /* fever_105.mp3 in Resources */,
 				0A311C912BF7EC55007EAC59 /* chatterboxfm.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
