@@ -14,6 +14,7 @@ protocol SplashScreenViewControllerFactory {
 extension DependencyContainer: SplashScreenViewControllerFactory {
     func makeSplashScreenViewController(navigationDelegate: SplashNavigationDelegate, onDismissed: (() -> Void)?) -> SplashScreenViewController {
         let splashViewModel = SplashViewModel(splashNavigationDelegate: navigationDelegate)
+        let radioPlayer = RadioPlayer()
         let splashScreenViewController = SplashScreenViewController(viewModel: splashViewModel)
         splashScreenViewController.onDismissed = onDismissed
         return splashScreenViewController

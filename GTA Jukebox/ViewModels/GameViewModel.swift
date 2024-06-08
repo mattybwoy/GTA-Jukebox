@@ -16,14 +16,13 @@ final class GameViewModel {
     weak var gameUpdateDelegate: GameUpdateDelegate?
     let gameNavigationDelegate: GameNavigationDelegate
     let game: GameSelection
-    private var audioPlayer: RadioPlayer
+    
     private var volumeLevel = 5
     private var volumeLimit = 0...10
     
-    init(gameNavigationDelegate: GameNavigationDelegate, game: GameSelection, audioPlayer: RadioPlayer) {
+    init(gameNavigationDelegate: GameNavigationDelegate, game: GameSelection) {
         self.gameNavigationDelegate = gameNavigationDelegate
         self.game = game
-        self.audioPlayer = audioPlayer
     }
     
     var updateVolume: Int {
@@ -33,7 +32,7 @@ final class GameViewModel {
         set(newVolume) {
             if volumeLimit.contains(newVolume) {
                 volumeLevel = newVolume
-                audioPlayer.audioPlayer.volume = Float(newVolume)
+                //audioPlayer.audioPlayer.volume = Float(newVolume)
                 gameUpdateDelegate?.didUpdateVolume(newVolume: volumeLevel)
             }
             return
@@ -41,8 +40,8 @@ final class GameViewModel {
     }
     
     func startRadioStream() {
-        audioPlayer.startRadio()
-        audioPlayer.audioPlayer.volume = Float(volumeLevel)
+
+        //audioPlayer.audioPlayer.volume = Float(volumeLevel)
     }
     
 }

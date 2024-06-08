@@ -15,6 +15,7 @@ final class SplashScreenViewController: GenericViewController <SplashView> {
         self.viewModel = viewModel
         super.init()
         rootView.splashDelegate = self
+        startRadioPlayer()
     }
     
     override func viewDidLoad() {
@@ -31,6 +32,10 @@ extension SplashScreenViewController: SplashScreenDelegate {
     
     func presentNextScreen() {
         viewModel.toGameSelection()
+    }
+    
+    func startRadioPlayer() {
+        viewModel.startRadio()
     }
     
 }

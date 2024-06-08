@@ -4,6 +4,7 @@
 //
 //  Created by Matthew Lock on 04/03/2024.
 //
+import Foundation
 
 public struct SplashViewModel {
     
@@ -13,4 +14,9 @@ public struct SplashViewModel {
         splashNavigationDelegate.toGameSelection()
     }
     
+    func startRadio() {
+        DispatchQueue.global(qos: .userInitiated).async {
+            RadioPlayer.sharedInstance.startRadio()
+        }
+    }
 }
