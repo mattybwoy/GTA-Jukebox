@@ -11,8 +11,8 @@ import AVFoundation
 final class RadioPlayer: AudioProtocol {
     
     static let sharedInstance = RadioPlayer()
-
-   private var allStations = [AVAudioPlayer]()
+    var playingStation: String = ""
+    private var allStations = [String: AVAudioPlayer]()
     
     func startRadio() {
         let gta3 = StationLoader.gta3Stations
@@ -28,7 +28,7 @@ final class RadioPlayer: AudioProtocol {
                 audioPlayer.play()
                 audioPlayer.volume = 0
                 audioPlayer.numberOfLoops = -1
-                allStations.append(audioPlayer)
+                allStations.updateValue(audioPlayer, forKey: radioStation)
             } catch {
                 print(LocalizedError.self)
             }
@@ -37,7 +37,9 @@ final class RadioPlayer: AudioProtocol {
     }
     
     func loadSelectedStation(station: String) {
-        
+        playingStation = station
+        let radioChannel = allStations[station]
+        radioChannel?.volume = 5
     }
     
 }

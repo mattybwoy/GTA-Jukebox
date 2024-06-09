@@ -39,9 +39,20 @@ final class GameViewModel {
         }
     }
     
-    func startRadioStream() {
-
+    func startRadioStream() -> String {
+        switch game {
+        case .gta3:
+            return StationLoader.gta3Stations.first ?? ""
+        case .viceCity:
+            return StationLoader.viceCityStations.first ?? ""
+        case .sanAndreas:
+            return StationLoader.sanAndreasStations.first ?? ""
+        }
         //audioPlayer.audioPlayer.volume = Float(volumeLevel)
+    }
+    
+    func loadStation(station: String) {
+        RadioPlayer.sharedInstance.loadSelectedStation(station: startRadioStream())
     }
     
 }

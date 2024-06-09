@@ -22,7 +22,7 @@ final class GameScreenViewController: GenericViewController <GameView> {
         rootView.radioPicker.dataSource = self
         rootView.radioPicker.delegate = self
         viewModel.updateVolume = 5
-        playRadioStreams()
+        playRadioStream()
     }
     
     override func viewDidLoad() {
@@ -33,8 +33,9 @@ final class GameScreenViewController: GenericViewController <GameView> {
         self.view = GameView(game: viewModel.game)
     }
     
-    func playRadioStreams() {
-        viewModel.startRadioStream()
+    func playRadioStream() {
+        let initialStation = viewModel.startRadioStream()
+        viewModel.loadStation(station: initialStation)
     }
 }
 
