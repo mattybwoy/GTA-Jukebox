@@ -32,7 +32,7 @@ final class GameViewModel {
         set(newVolume) {
             if volumeLimit.contains(newVolume) {
                 volumeLevel = newVolume
-                //audioPlayer.audioPlayer.volume = Float(newVolume)
+                RadioPlayer.sharedInstance.playingStation?.volume = Float(volumeLevel)
                 gameUpdateDelegate?.didUpdateVolume(newVolume: volumeLevel)
             }
             return
@@ -48,7 +48,6 @@ final class GameViewModel {
         case .sanAndreas:
             return StationLoader.sanAndreasStations.first ?? ""
         }
-        //audioPlayer.audioPlayer.volume = Float(volumeLevel)
     }
     
     func loadStation(station: String) {
@@ -60,6 +59,7 @@ final class GameViewModel {
 extension GameViewModel: GameNavigationDelegate {
     
     func dismiss() {
+        RadioPlayer.sharedInstance.playingStation?.setVolume(0, fadeDuration: 0.2)
         gameNavigationDelegate.dismiss()
     }
     

@@ -11,7 +11,7 @@ import AVFoundation
 final class RadioPlayer: AudioProtocol {
     
     static let sharedInstance = RadioPlayer()
-    var playingStation: String = ""
+    var playingStation: AVAudioPlayer?
     private var allStations = [String: AVAudioPlayer]()
     
     func startRadio() {
@@ -33,12 +33,11 @@ final class RadioPlayer: AudioProtocol {
                 print(LocalizedError.self)
             }
         }
-        print(allStations)
     }
     
     func loadSelectedStation(station: String) {
-        playingStation = station
         let radioChannel = allStations[station]
+        playingStation = radioChannel
         radioChannel?.volume = 5
     }
     
