@@ -51,7 +51,14 @@ final class GameViewModel {
     }
     
     func loadStation(station: String) {
+        RadioPlayer.sharedInstance.playingStation = nil
         RadioPlayer.sharedInstance.loadSelectedStation(station: startRadioStream())
+    }
+    
+    func loadSelectedStation(station: String) {
+        RadioPlayer.sharedInstance.playingStation?.setVolume(0, fadeDuration: 0.2)
+        RadioPlayer.sharedInstance.playingStation = nil
+        RadioPlayer.sharedInstance.loadSelectedStation(station: station)
     }
     
 }
@@ -60,6 +67,7 @@ extension GameViewModel: GameNavigationDelegate {
     
     func dismiss() {
         RadioPlayer.sharedInstance.playingStation?.setVolume(0, fadeDuration: 0.2)
+        RadioPlayer.sharedInstance.playingStation = nil
         gameNavigationDelegate.dismiss()
     }
     
