@@ -48,6 +48,7 @@ final class GameView: UIView {
             gameBackground.heightAnchor.constraint(equalToConstant: 320),
             gameBackground.widthAnchor.constraint(equalToConstant: bounds.width)
         ])
+        gameBackground.addSubview(gameLogoImage)
         
         addSubview(radioPicker)
         radioPicker.translatesAutoresizingMaskIntoConstraints = false
@@ -213,7 +214,7 @@ final class GameView: UIView {
     var radioPicker: UIPickerView = {
         let radioPicker = UIPickerView()
         radioPicker.transform = CGAffineTransform(rotationAngle: rotationAngle)
-        radioPicker.backgroundColor = .darkGray
+        radioPicker.backgroundColor = .clear
         return radioPicker
     }()
     

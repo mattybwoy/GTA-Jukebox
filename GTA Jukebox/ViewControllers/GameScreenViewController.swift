@@ -103,7 +103,6 @@ extension GameScreenViewController: UIPickerViewDataSource, UIPickerViewDelegate
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         let radioStationsList = mapper.radioChannelLoader
         viewModel.loadSelectedStation(station: radioStationsList[row])
-        print(radioStationsList[row])
     }
 }
 
