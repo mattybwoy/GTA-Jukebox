@@ -37,6 +37,13 @@
 		0A52D90D2C0CCC5000EEB41F /* radiox.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 0A52D9022C0CCC5000EEB41F /* radiox.mp3 */; };
 		0A52D90E2C0CCC5000EEB41F /* sfur.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 0A52D9032C0CCC5000EEB41F /* sfur.mp3 */; };
 		0A52D90F2C0CCC5000EEB41F /* wctr.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 0A52D9042C0CCC5000EEB41F /* wctr.mp3 */; };
+		0AAD42002D18926D00250248 /* GTARadio.gif in Resources */ = {isa = PBXBuildFile; fileRef = 0AAD41FB2D18926D00250248 /* GTARadio.gif */; };
+		0AAD42012D18926D00250248 /* GTA3View.png in Resources */ = {isa = PBXBuildFile; fileRef = 0AAD41FA2D18926D00250248 /* GTA3View.png */; };
+		0AAD42022D18926D00250248 /* GTASanAndreasView.png in Resources */ = {isa = PBXBuildFile; fileRef = 0AAD41FD2D18926D00250248 /* GTASanAndreasView.png */; };
+		0AAD42032D18926D00250248 /* GTAViceCityRadioView.png in Resources */ = {isa = PBXBuildFile; fileRef = 0AAD41FE2D18926D00250248 /* GTAViceCityRadioView.png */; };
+		0AAD42042D18926D00250248 /* GTAViceCityView.png in Resources */ = {isa = PBXBuildFile; fileRef = 0AAD41FF2D18926D00250248 /* GTAViceCityView.png */; };
+		0AAD42052D18926D00250248 /* GTASanAndreasRadioView.png in Resources */ = {isa = PBXBuildFile; fileRef = 0AAD41FC2D18926D00250248 /* GTASanAndreasRadioView.png */; };
+		0AAD42062D18926D00250248 /* GTA3RadioView.png in Resources */ = {isa = PBXBuildFile; fileRef = 0AAD41F92D18926D00250248 /* GTA3RadioView.png */; };
 		0AC244342B7EA60000F33D92 /* SelectViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AC244332B7EA60000F33D92 /* SelectViewModel.swift */; };
 		0AC244362B8681B400F33D92 /* SplashScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AC244352B8681B400F33D92 /* SplashScreenViewController.swift */; };
 		0AC244382B8681F000F33D92 /* SplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AC244372B8681F000F33D92 /* SplashView.swift */; };
@@ -135,6 +142,13 @@
 		0A52D9022C0CCC5000EEB41F /* radiox.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = radiox.mp3; path = ../../../../../../../Downloads/SanAndreasStations/radiox.mp3; sourceTree = "<group>"; };
 		0A52D9032C0CCC5000EEB41F /* sfur.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = sfur.mp3; path = ../../../../../../../Downloads/SanAndreasStations/sfur.mp3; sourceTree = "<group>"; };
 		0A52D9042C0CCC5000EEB41F /* wctr.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = wctr.mp3; path = ../../../../../../../Downloads/SanAndreasStations/wctr.mp3; sourceTree = "<group>"; };
+		0AAD41F92D18926D00250248 /* GTA3RadioView.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = GTA3RadioView.png; sourceTree = "<group>"; };
+		0AAD41FA2D18926D00250248 /* GTA3View.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = GTA3View.png; sourceTree = "<group>"; };
+		0AAD41FB2D18926D00250248 /* GTARadio.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = GTARadio.gif; sourceTree = "<group>"; };
+		0AAD41FC2D18926D00250248 /* GTASanAndreasRadioView.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = GTASanAndreasRadioView.png; sourceTree = "<group>"; };
+		0AAD41FD2D18926D00250248 /* GTASanAndreasView.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = GTASanAndreasView.png; sourceTree = "<group>"; };
+		0AAD41FE2D18926D00250248 /* GTAViceCityRadioView.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = GTAViceCityRadioView.png; sourceTree = "<group>"; };
+		0AAD41FF2D18926D00250248 /* GTAViceCityView.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = GTAViceCityView.png; sourceTree = "<group>"; };
 		0AC244332B7EA60000F33D92 /* SelectViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectViewModel.swift; sourceTree = "<group>"; };
 		0AC244352B8681B400F33D92 /* SplashScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreenViewController.swift; sourceTree = "<group>"; };
 		0AC244372B8681F000F33D92 /* SplashView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashView.swift; sourceTree = "<group>"; };
@@ -379,6 +393,13 @@
 		341E421C2AC9B7A400681B63 /* Documentation */ = {
 			isa = PBXGroup;
 			children = (
+				0AAD41F92D18926D00250248 /* GTA3RadioView.png */,
+				0AAD41FA2D18926D00250248 /* GTA3View.png */,
+				0AAD41FB2D18926D00250248 /* GTARadio.gif */,
+				0AAD41FC2D18926D00250248 /* GTASanAndreasRadioView.png */,
+				0AAD41FD2D18926D00250248 /* GTASanAndreasView.png */,
+				0AAD41FE2D18926D00250248 /* GTAViceCityRadioView.png */,
+				0AAD41FF2D18926D00250248 /* GTAViceCityView.png */,
 				341E421D2AC9B7BE00681B63 /* GTA.png */,
 			);
 			path = Documentation;
@@ -535,6 +556,13 @@
 				0A52D8E12C0B7CE700EEB41F /* flashback_95.6.mp3 in Resources */,
 				0A52D90B2C0CCC5000EEB41F /* bouncefm.mp3 in Resources */,
 				341E41F32AC99C6100681B63 /* Assets.xcassets in Resources */,
+				0AAD42002D18926D00250248 /* GTARadio.gif in Resources */,
+				0AAD42012D18926D00250248 /* GTA3View.png in Resources */,
+				0AAD42022D18926D00250248 /* GTASanAndreasView.png in Resources */,
+				0AAD42032D18926D00250248 /* GTAViceCityRadioView.png in Resources */,
+				0AAD42042D18926D00250248 /* GTAViceCityView.png in Resources */,
+				0AAD42052D18926D00250248 /* GTASanAndreasRadioView.png in Resources */,
+				0AAD42062D18926D00250248 /* GTA3RadioView.png in Resources */,
 				341E41F12AC99C5E00681B63 /* Main.storyboard in Resources */,
 				0A52D8E52C0B7CE700EEB41F /* rise_fm.mp3 in Resources */,
 				0A52D90D2C0CCC5000EEB41F /* radiox.mp3 in Resources */,
