@@ -12,6 +12,8 @@ A radio player displaying the various radio channels and songs based on the PS2 
 - Launch screen created 
 - Splash screen created with animation
 - Navigation between screens now functional
+- Radio player functional with volume controls
+- Radio continuously plays irrespective of the station selected
 
 ## Improvements
 - Unit Testing
